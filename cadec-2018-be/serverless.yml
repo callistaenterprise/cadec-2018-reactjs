@@ -1,0 +1,101 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: cadec-2018-be
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  profile: sw
+  region: eu-west-1
+
+custom:
+  myStage: ${opt:stage, self:provider.stage}
+  webpackIncludeModules: true # enable auto-packing of external modules
+  externals: [nodeExternals()]
+  dynamodb:
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+      seed: true
+    seed:
+        events:
+          sources:
+            - table: ${self:provider.stage}-events
+              sources: [./cadec_2018_data.json]
+
+
+plugins:
+  - serverless-webpack
+  - serverless-dynamodb-local
+  - serverless-offline #serverless-offline needs to be last in the list
+
+functions:
+  graphql:
+    handler: index.graphqlHandler
+    environment:
+      eventsTable: ${self:provider.stage}-events
+    events:
+      - http:
+          path: graphql
+          method: POST
+          cors: true
+      - http:
+          path: graphql
+          method: GET
+          cors: true
+  graphiql:
+    handler: index.graphiqlHandler
+    environment:
+    events:
+      - http:
+          path: graphiql
+          method: GET
+          cors: true
+resources:
+  Resources:
+    EventsDynamo:
+      Type: AWS::DynamoDB::Table
+      DeletionPolicy: Retain
+      Properties:
+        TableName: ${self:provider.stage}-events
+        AttributeDefinitions:
+          -
+            AttributeName: id
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    DynamoDBIamPolicy:
+      Type: AWS::IAM::Policy
+      DependsOn: EventsDynamo
+      Properties:
+        PolicyName: lambda-dynamodb
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:GetItem
+                - dynamodb:PutItem
+                - dynamodb:Scan
+                - dynamodb:Query
+              Resource: arn:aws:dynamodb:*
+        Roles:
+          - Ref: IamRoleLambdaExecution
