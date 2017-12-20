@@ -25,7 +25,7 @@ class ScheduleListScreen extends React.Component {
   };
 
   state = {
-    selectedDay: "Thursday",
+    selectedDay: "Early",
     isRefreshing: false
   };
 
@@ -60,24 +60,24 @@ class ScheduleListScreen extends React.Component {
       .value();
 
     const items = _.groupBy(sortedScheduleItems, item => item.startDate);
-    const itemsByDay = _.groupBy(sortedScheduleItems, item =>
-      parseCustomDateString(item.startDate).getDay()
+    const itemsByPeriod = _.groupBy(sortedScheduleItems, item =>
+      parseCustomDateString(item.startDate).getHours() < 15 ? 1 : 2
     );
-    const eventsForThursday = _.groupBy(
-      _.sortBy(itemsByDay[3], item => item.startDate),
+    const eventsForEarly = _.groupBy(
+      _.sortBy(itemsByPeriod[1], item => item.startDate),
       item => item.startDate
     );
 
-    const eventsForFriday = _.groupBy(
-      _.sortBy(itemsByDay[3], item => item.startDate),
+    const eventsForLater = _.groupBy(
+      _.sortBy(itemsByPeriod[2], item => item.startDate),
       item => item.startDate
     );
     const sections = [];
     let events =
-      this.state.selectedDay === "Thursday"
-        ? eventsForThursday
-        : eventsForFriday;
-
+      this.state.selectedDay === "Early"
+        ? eventsForEarly
+        : eventsForLater;
+    console.log("-----", itemsByPeriod, eventsForEarly, eventsForLater)
     Object.keys(events).forEach(date => {
       sections.push({ key: date, data: events[date] });
     });
@@ -214,15 +214,15 @@ class HeaderComponent extends React.Component {
           }}
         >
           <DaySelectionButton
-            day="Thursday"
+            day="Early"
             selectedDay={this.props.selectedDay}
-            onPress={() => this.props.onChangeSelectedDay("Thursday")}
+            onPress={() => this.props.onChangeSelectedDay("Early")}
           />
           <View style={{ width: 10 }} />
           <DaySelectionButton
-            day="Friday"
+            day="Later"
             selectedDay={this.props.selectedDay}
-            onPress={() => this.props.onChangeSelectedDay("Friday")}
+            onPress={() => this.props.onChangeSelectedDay("Later")}
           />
         </View>
       </View>

@@ -15,6 +15,7 @@ type Event{
   shortDescription: String
   date: String
   time: String
+  place: String
   description: String
   talks(tags: String): [Talk]
 }
