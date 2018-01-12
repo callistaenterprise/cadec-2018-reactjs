@@ -1,13 +1,37 @@
 import React from "react";
-import SpeakersContainer from "./speakers_container";
-export default ({ talk: {title, description, time, start}, year, speakers, cadecState }) => (
-  <talk>
-    <h1>{title}</h1>
-    <time>
-      <span>{start}</span>
-      <span>{time}</span>
-    </time>
-    <SpeakersContainer year={year} speakers={speakers} cadecState={cadecState}/>
-    <p>{description}</p>
-  </talk>
+import moment from "moment";
+import { Link } from "react-router-dom";
+import Speakers from "./speakers";
+import {
+  Header3,
+  TalkRow,
+  TalkRowDivider,
+  TalkRowContent,
+  TalkRowText,
+  SpeakerImage
+} from "cadec-2018-styles/web";
+
+const _time = startDate => moment.utc(startDate).format("HH:mm");
+export default ({
+  talk: { id, title, description, time, startDate },
+  year,
+  speakers = [],
+  cadecState
+}) => (
+  <TalkRow>
+    <TalkRowDivider>
+      <Header3>{_time(startDate)}</Header3>
+    </TalkRowDivider>
+    <TalkRowContent>
+      <Link to={`/talks/${id}`}>
+        <Header3>{title}</Header3>
+        {speakers.map(speaker => (
+          <div key={`speaker-${speaker.id}`}>{speaker.name}</div>
+        ))}
+      </Link>
+      <div>
+        {speakers.map(speaker => <SpeakerImage speaker={speaker.imageName} />)}
+      </div>
+    </TalkRowContent>
+  </TalkRow>
 );

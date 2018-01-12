@@ -1,0 +1,15 @@
+{
+  "name": "cadec-2018-state",
+  "version": "1.0.0",
+  "description": "Redux state for cadec-2018 apps",
+  "main": "index.js",
+  "author": "stephen white",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-cache-redux": "^0.1.0-alpha.7",
+    "prettier": "^1.9.2",
+    "react": "16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  }
+}

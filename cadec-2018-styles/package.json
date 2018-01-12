@@ -1,0 +1,14 @@
+{
+  "name": "cadec-2018-styles",
+  "version": "1.0.0",
+  "description": "Styled components for cadec-2018 apps",
+  "main": "index.js",
+  "author": "stephen white",
+  "license": "MIT",
+  "dependencies": {
+    "@expo/vector-icons": "^6.2.2",
+    "prettier": "^1.9.2",
+    "react-styled-flexbox": "^1.0.4",
+    "styled-components": "^2.4.0"
+  }
+}

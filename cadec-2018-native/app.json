@@ -1,21 +1,10 @@
 {
   "expo": {
-    "name": "cadec-2018",
-    "description": "No description",
-    "slug": "cadec-2018",
-    "privacy": "public",
     "sdkVersion": "23.0.0",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/images/icon.png",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
+    "ignoreNodeModulesValidation": true,
+    "packagerOpts": {
+      "config": "rn-cli.config.js",
+      "projectRoots": ""
     }
   }
 }

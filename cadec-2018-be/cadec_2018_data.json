@@ -1,160 +1,188 @@
 [
-
-{
-  "address": "Filmstaden Bergakungen, Skånegatan 16 B, Göteborg",
-  "afterCadec": "Mat, dryck och mingel 17.30 - Callistas kontorFabriksgatan 13, Gårda",
-  "date": "2018-01-24",
-  "description": "<p>Rivstarta 2018 med ett inspirerande kunskapslyft. Vi har nöjet att bjuda in till en rykande aktuell Cadec med de senaste trenderna inom arkitektur och utveckling - nu i ett större format än någonsin.</p> <p>Nytt för i år är att Cadec Göteborg äger rum på Filmstaden Bergakungen. Där får vi gott om plats för vår ständigt växande publik och hoppas kunna erbjuda en presentationsupplevelse utöver det vanliga.</p><p> Du är också inbjuden till After Cadec - varva ner efter konferensen med mat, dryck och mingel.</p> <p>Konferensen är som vanligt kostnadsfri.</p><p>Antalet platser är begränsat - anmäl dig redan idag för att inte missa denna chans till gratis kompetensutveckling.</p>",
-  "id": "cadec2018",
-  "latlng": "57.702244,11.986245",
-  "place": "Filmstaden Bergakungen, Skånegatan 16 B, Göteborg",
-  "shortDescription": "Cadec 2018 – med de senaste trenderna inom arkitektur och systemutveckling",
-  "talks": {
-    "1": {
-      "description": "Introduktion",
-      "eventId": "cadec2018",
-      "id": 1,
-      "speakers": [
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Jan is great!",
-          "github": "github",
-          "id": 1,
-          "name": "Jan Västernäs",
-          "twitter": "twitter"
-        }
-      ],
-      "startDate": "2018-01-24 13:00:00 +0000 UTC",
-      "title": "Introduktion"
+  {
+    "address": "Filmstaden Bergakungen, Skånegatan 16 B, Göteborg",
+    "afterCadec":
+      "Mat, dryck och mingel 17.30 - Callistas kontorFabriksgatan 13, Gårda",
+    "date": "2018-01-24",
+    "dateText": "onsdag 24:e januari 2018",
+    "description":
+      "Rivstarta 2018 med ett inspirerande kunskapslyft. Vi har nöjet att bjuda in till en rykande aktuell Cadec med de senaste trenderna inom arkitektur och utveckling - nu i ett större format än någonsin. \n\nNytt för i år är att Cadec Göteborg äger rum på Filmstaden Bergakungen. Där får vi gott om plats för vår ständigt växande publik och hoppas kunna erbjuda en presentationsupplevelse utöver det vanliga. \n\n Du är också inbjuden till After Cadec - varva ner efter konferensen med mat, dryck och mingel. \n\n Konferensen är som vanligt kostnadsfri. \n\nAntalet platser är begränsat - anmäl dig redan idag för att inte missa denna chans till gratis kompetensutveckling.",
+    "id": "cadec2018",
+    "latlng": "57.702244,11.986245",
+    "place": "Filmstaden Bergakungen, Skånegatan 16 B, Göteborg",
+    "shortDescription":
+      "Cadec 2018 – med de senaste trenderna inom arkitektur och systemutveckling",
+    "talks": {
+      "1": {
+        "description": "Introduktion",
+        "eventId": "cadec2018",
+        "id": 1,
+        "speakers": [
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/janvasternas.jpg",
+            "bio": "Jan is great!",
+            "github": "github",
+            "id": 1,
+            "imageName": "janvasternas",
+            "name": "Jan Västernäs",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-01-24 13:00:00 +0000 UTC",
+        "title": "Introduktion"
+      },
+      "2": {
+        "description":
+          "AI, Deep Learning, Machine Learning – begreppen haglar. Vad är skillnaden, och vad behöver jag som mjukvaruutvecklare kunna och förstå för att kunna dra nytta av teknologin? Machine Learning och AI har funnits  i över 30 år, varför är det så hett nu? I detta föredrag försöker vi reda ut begreppen och räta ut frågetecknen. \n\nMachine Learning är ett väldigt brett område och kan användas i många tillämpningar - talsyntes, bildigenkänning, ekonomiska förutsägelser och optimering. Det innefattar allt från avancerad matematisk teori till enkla tumregler samt även mer praktiska problemområden som prestanda och testning.\n\nFöredraget reder ut de grundläggande koncepten och den teoretiska grunden, samt ger pekare till intressanta områden att fortsätta utbilda sig inom. Vi demonstrerar också hur ett konkret arbetsflöde kan se ut AI-plattformen H2O.",
+        "eventId": "cadec2018",
+        "id": 2,
+        "speakers": [
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/niklasantoncic.jpg",
+            "bio": "Niclas is great!",
+            "github": "github",
+            "id": 1,
+            "imageName": "niklasantoncic",
+            "name": "Niklas Antoncic",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-01-24 13:05:00 +0000 UTC",
+        "title": "Machine Learning för dig som vill börja koda nu"
+      },
+      "3": {
+        "description":
+          "En hel del har hänt sedan förra årets Cadec – Java 9 och Java EE 8 är släppta och på JavaOne talade man om fyra nya ledande principer för Javas utveckling framåt: ”Open, Evolving, Nimble & Scalable”. \n\nHar man hittat botemedlet på JVM:ens tillkortakommanden gällande fotavtryck i drift med avseende på minne och uppstartstid? \n\nHur ska innovationstakten inom ekosystemet öka?     \n\nUnder detta flashföredrag sammanfattar vi det viktigaste som hänt under det gångna året, försöker besvara ovanstående frågor samt tittar praktiskt på om problematiken med JVM:ens fotavtryck kvarstår.",
+        "eventId": "cadec2018",
+        "id": 3,
+        "speakers": [
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/andreastell.jpg",
+            "bio": "Andreas is great!",
+            "github": "github",
+            "id": 2,
+            "imageName": "andreastell",
+            "name": "Andreas Tell",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-01-24 13:45:00 +0000 UTC",
+        "title":
+          "”Open, Evolving, Nimble & Scalable” – är Java redo för microservices?"
+      },
+      "4": {
+        "description":
+          "Det har nog inte undgått någon att Apache Kafka trendar just nu. Vi fullkomligen bombarderas av artiklar om strömmande arkitektur, event-sourcing och SMACK-stack, för att bara nämna några områden där Apache Kafka spelar en betydande roll.  \n\nNu har även en första major version av Apache Kafka släppts. \n\nTillsammans skall vi reda ut vad en ”distributed commit log” faktiskt är för något. Några av frågorna vi belyser är \n\n * Hur fungerar den? \n\n * Vilka fallgropar finns? \n\n * Vad har detta med strömmar att göra? \n\n * Och framför allt, varför pratas det så mycket om detta nu? \n\nVi avslutar sedan med att använda våra nyvunna kunskaper för att bygga ett strömmande systemfrån grunden.",
+        "eventId": "cadec2018",
+        "id": 4,
+        "speakers": [
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/torbjornclaesson.jpg",
+            "bio": "Torbjörn is great!",
+            "github": "github",
+            "id": 3,
+            "imageName": "torbjornclaesson",
+            "name": "Torbjörn Claesson",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-01-24 14:05:00 +0000 UTC",
+        "title": "Kafka i strömmen – så får du flyt på dina dataflöden"
+      },
+      "5": {
+        "description": "FIKA",
+        "eventId": "cadec2018",
+        "id": 5,
+        "speakers": [],
+        "startDate": "2018-01-24 14:45:00 +0000 UTC",
+        "title": "Fika"
+      },
+      "6": {
+        "description":
+          "ReactJS har med sin ansats för att strukturera, testa och resonera kring kod, samt genom sin tonvikt på tillstånd och envägs dataflöden, utvecklats till ett föredöme inom frontend-utveckling. \n\nEn inte särskilt väl dold hemlighet i ReactJS är förmågan att skapa användargränssnitt på en stor mängd plattformar; webb, mobil (iOS, Android), desktop, terminal (faktiskt) och – något överraskande – hårdvara. \n\nDelad kod och gemensamma underliggande modeller/designprinciper bidrar till en verkligt mångsidig utvecklingsmiljö, där ett traditionellt webb/javascript-team kan utveckla mot många olika målmiljöer och plattformar. Vi utforskar detta genom några praktiska exempel samt visar på magin i en gemensam design för alla plattformar. ",
+        "eventId": "cadec2018",
+        "id": 6,
+        "speakers": [
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/stephenwhite.jpg",
+            "bio": "Stephen is super!",
+            "github": "github",
+            "id": 4,
+            "imageName": "stephenwhite",
+            "name": "Stephen White",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-01-24 15:15:00 +0000 UTC",
+        "title": "ReactJS – en gemensam design för alla plattformar"
+      },
+      "7": {
+        "description":
+          "“Finns det några GDPR-aspekter på det här projektet?” \n\nDet är en fråga som hörs allt oftare. \n\nGDPR – EU:s dataskyddsförordning – träder i kraft 25 maj 2018, och ersätter då personuppgiftslagen. Genom GDPR vill EU tvinga företag att ta ett helhetsgrepp på frågor som rör behandling av personuppgifter och personlig integritet. \n\nVarför ska du som utvecklare/arkitekt behöva bry dig om detta? \n\nVi gör en snabb överflygning av lagstiftningen och tittar på ett antal fall där den kommer att påverka arbetet för oss som sitter med arkitektur och kod. ",
+        "eventId": "cadec2018",
+        "id": 7,
+        "speakers": [
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/bjorngenfors.jpg",
+            "bio": "Björn is great!",
+            "github": "github",
+            "id": 5,
+            "imageName": "bjorngenfors",
+            "name": "Björn Genfors",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-01-24 15:45:00 +0000 UTC",
+        "title": "Vad är GDPR och varför ska jag bry mig?"
+      },
+      "8": {
+        "description":
+          "Bitcoin beskrivs av vissa som den största innovationen sedan Internet. På senare tid har det dock blivit tydligt att Bitcoin bara är en del i något ännu större, nämligen teknologin som ligger till grund för Bitcoin – blockkedjan. \n\nVi kommer att ge en introduktion till hur blockkedjan fungerar och vilken inverkan tekniken kan ha på den framtida samhällsutvecklingen. \n\nFöredraget beskriver också Ethereum, som förutom en Bitcoinliknande blockkedja även erbjuder en plattform (EVM) för distribuerade blockkedjeapplikationer, s.k. DApps eller smarta kontrakt. \n\nAvslutningsvis demonstrerar vi praktiskt hur utveckling och användning av smarta kontrakt går till.",
+        "eventId": "cadec2018",
+        "id": 8,
+        "speakers": [
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/parwenaker.jpg",
+            "bio": "Pär is great!",
+            "github": "github",
+            "id": 6,
+            "imageName": "parwenaker",
+            "name": "Pär Wenåker",
+            "twitter": "twitter"
+          },
+          {
+            "avatarUrl":
+              "http://callistaenterprise.se/assets/medarbetare/peterlarsson.jpg",
+            "bio": "Peter is best!",
+            "github": "github",
+            "id": 7,
+            "imageName": "peterlarsson",
+            "name": "Peter Larsson",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-01-24 16:05:00 +0000 UTC",
+        "title":
+          "Blockkedjan – länken till smarta kontrakt och andra innovativa lösningar"
+      },
+      "9": {
+        "description": "Slut!",
+        "eventId": "cadec2018",
+        "id": 9,
+        "speakers": [],
+        "startDate": "2018-01-24 16:45:00 +0000 UTC",
+        "title": "Slut!"
+      }
     },
-    "2": {
-      "description": "AI, Deep Learning, Machine Learning – begreppen haglar. Vad är skillnaden, och vad behöver jag som mjukvaruutvecklare kunna och förstå för att kunna dra nytta av teknologin? Machine Learning och AI har funnits  i över 30 år, varför är det så hett nu? I detta föredrag försöker vi reda ut begreppen och räta ut frågetecknen. Machine Learning är ett väldigt brett område och kan användas i många tillämpningar - talsyntes, bildigenkänning, ekonomiska förutsägelser och optimering. Det innefattar allt från avancerad matematisk teori till enkla tumregler samt även mer praktiska problemområden som prestanda och testning.Föredraget reder ut de grundläggande koncepten och den teoretiska grunden, samt ger pekare till intressanta områden att fortsätta utbilda sig inom. Vi demonstrerar också hur ett konkret arbetsflöde kan se ut AI-plattformen H2O.",
-      "eventId": "cadec2018",
-      "id": 2,
-      "speakers": [
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Niclas is great!",
-          "github": "github",
-          "id": 1,
-          "name": "Niklas Antoncic",
-          "twitter": "twitter"
-        }
-      ],
-      "startDate": "2018-01-24 13:05:00 +0000 UTC",
-      "title": "Machine Learning för dig som vill börja koda nu"
-    },
-    "3": {
-      "description": "En hel del har hänt sedan förra årets Cadec – Java 9 och Java EE 8 är släppta och på JavaOne talade man om fyra nya ledande principer för Javas utveckling framåt: ”Open, Evolving, Nimble & Scalable”. Har man hittat botemedlet på JVM:ens tillkortakommanden gällande fotavtryck i drift med avseende på minne och uppstartstid? Hur ska innovationstakten inom ekosystemet öka?     Under detta flashföredrag sammanfattar vi det viktigaste som hänt under det gångna året, försöker besvara ovanstående frågor samt tittar praktiskt på om problematiken med JVM:ens fotavtryck kvarstår.",
-      "eventId": "cadec2018",
-      "id": 3,
-      "speakers": [
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Andreas is great!",
-          "github": "github",
-          "id": 2,
-          "name": "Andreas Tell",
-          "twitter": "twitter"
-        }
-      ],
-      "startDate": "2018-01-24 13:45:00 +0000 UTC",
-      "title": "”Open, Evolving, Nimble & Scalable” – är Java redo för microservices?"
-    },
-    "4": {
-      "description": "Det har nog inte undgått någon att Apache Kafka trendar just nu. Vi fullkomligen bombarderas av artiklar om strömmande arkitektur, event-sourcing och SMACK-stack, för att bara nämna några områden där Apache Kafka spelar en betydande roll.  Nu har även en första major version av Apache Kafka släppts. Tillsammans skall vi reda ut vad en ”distributed commit log” faktiskt är för något. Några av frågorna vi belyser är•Hur fungerar den?  •Vilka fallgropar finns?  •Vad har detta med strömmar att göra? •Och framför allt, varför pratas det så mycket om detta nu? Vi avslutar sedan med att använda våra nyvunna kunskaper för att bygga ett strömmande systemfrån grunden.",
-      "eventId": "cadec2018",
-      "id": 4,
-      "speakers": [
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Torbjörn is great!",
-          "github": "github",
-          "id": 3,
-          "name": "Torbjörn Claesson",
-          "twitter": "twitter"
-        }
-      ],
-      "startDate": "2018-01-24 14:05:00 +0000 UTC",
-      "title": "Kafka i strömmen – så får du flyt på dina dataflöden"
-    },
-    "5": {
-      "description": "FIKA",
-      "eventId": "cadec2018",
-      "id": 5,
-      "speakers": [],
-      "startDate": "2018-01-24 14:45:00 +0000 UTC",
-      "title": "Machine Learning för dig som vill börja koda nu"
-    },
-    "6": {
-      "description": "ReactJS har med sin ansats för att strukturera, testa och resonera kring kod, samt genom sin tonvikt på tillstånd och envägs dataflöden, utvecklats till ett föredöme inom frontend-utveckling. En inte särskilt väl dold hemlighet i ReactJS är förmågan att skapa användargränssnitt på en stor mängd plattformar; webb, mobil (iOS, Android), desktop, terminal (faktiskt) och – något överraskande – hårdvara. Delad kod och gemensamma underliggande modeller/designprinciper bidrar till en verkligt mångsidig utvecklingsmiljö, där ett traditionellt webb/javascript-team kan utveckla mot många olika målmiljöer och plattformar. Vi utforskar detta genom några praktiska exempel samt visar på magin i en gemensam design för alla plattformar. ",
-      "eventId": "cadec2018",
-      "id": 6,
-      "speakers": [
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Stephen is super!",
-          "github": "github",
-          "id": 4,
-          "name": "Stephen White",
-          "twitter": "twitter"
-        }
-      ],
-      "startDate": "2018-01-24 15:15:00 +0000 UTC",
-      "title": "ReactJS – en gemensam design för alla plattformar"
-    },
-    "7": {
-      "description": "“Finns det några GDPR-aspekter på det här projektet?” Det är en fråga som hörs allt oftare. GDPR – EU:s dataskyddsförordning – träder i kraft 25 maj 2018, och ersätter då personuppgiftslagen. Genom GDPR vill EU tvinga företag att ta ett helhetsgrepp på frågor som rör behandling av personuppgifter och personlig integritet. Varför ska du som utvecklare/arkitekt behöva bry dig om detta?Vi gör en snabb överflygning av lagstiftningen och tittar på ett antal fall där den kommer att påverka arbetet för oss som sitter med arkitektur och kod. ",
-      "eventId": "cadec2018",
-      "id": 7,
-      "speakers": [
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Björn is great!",
-          "github": "github",
-          "id": 5,
-          "name": "Björn Genfors",
-          "twitter": "twitter"
-        }
-      ],
-      "startDate": "2018-01-24 15:45:00 +0000 UTC",
-      "title": "Vad är GDPR och varför ska jag bry mig?"
-    },
-    "8": {
-      "description": "Bitcoin beskrivs av vissa som den största innovationen sedan Internet. På senare tid har det dock blivit tydligt att Bitcoin bara är en del i något ännu större, nämligen teknologin som ligger till grund för Bitcoin – blockkedjan. Vi kommer att ge en introduktion till hur blockkedjan fungerar och vilken inverkan tekniken kan ha på den framtida samhällsutvecklingen. Föredraget beskriver också Ethereum, som förutom en Bitcoinliknande blockkedja även erbjuder en plattform (EVM) för distribuerade blockkedjeapplikationer, s.k. DApps eller smarta kontrakt. Avslutningsvis demonstrerar vi praktiskt hur utveckling och användning av smarta kontrakt går till.",
-      "eventId": "cadec2018",
-      "id": 8,
-      "speakers": [
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Pär is great!",
-          "github": "github",
-          "id": 6,
-          "name": "Pär Wenåker",
-          "twitter": "twitter"
-        },
-        {
-          "avatarUrl": "https://api.eventlama.com/avatars/events/74/speakers/734/avatar.png",
-          "bio": "Peter is best!",
-          "github": "github",
-          "id": 7,
-          "name": "Peter Larsson",
-          "twitter": "twitter"
-        }
-      ],
-      "startDate": "2018-01-24 16:05:00 +0000 UTC",
-      "title": "Blockkedjan – länken till smarta kontrakt och andra innovativa lösningar"
-    },
-    "9": {
-      "description": "Slut!",
-      "eventId": "cadec2018",
-      "id": 9,
-      "speakers": [],
-      "startDate": "2018-01-24 16:45:00 +0000 UTC",
-      "title": "Slut!"
-    }
-  },
-  "time": "13.00 till 17.00 registrering från 12.30",
-  "title": "Cadec 2018",
-  "title2": "CALLISTA DEVELOPER’S CONFERENCE"
-}]
+    "time": "13.00 till 17.00 registrering från 12.30",
+    "title": "Cadec 2018",
+    "title2": "CALLISTA DEVELOPER’S CONFERENCE"
+  }
+]

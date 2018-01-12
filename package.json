@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": [
+    "cadec-2018-web",
+    "cadec-2018-native",
+    "cadec-2018-api",
+    "cadec-2018-styles",
+    "cadec-2018-state"
+  ]
+}

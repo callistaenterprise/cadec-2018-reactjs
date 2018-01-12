@@ -770,12 +770,12 @@ const items = _.groupBy(sortedScheduleItems, item => item.startDate);
 const itemsByDay = _.groupBy(sortedScheduleItems, item =>
   parseCustomDateString(item.startDate).getDay()
 );
-const itemsForThursday = _.groupBy(
+const itemsForEarly = _.groupBy(
   _.sortBy(itemsByDay[4], item => item.startDate),
   item => item.startDate
 );
 
-const itemsForFriday = _.groupBy(
+const itemsForLater = _.groupBy(
   _.sortBy(itemsByDay[5], item => item.startDate),
   item => item.startDate
 );
@@ -784,6 +784,6 @@ module.exports = {
   response,
   sampleEvent,
   sortedScheduleItems,
-  eventsForThursday: itemsForThursday,
-  eventsForFriday: itemsForFriday
+  eventsForEarly: itemsForEarly,
+  eventsForLater: itemsForLater
 };
