@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import { dateUtils } from "cadec-2018-utils";
 import Speakers from "./speakers";
 import {
   Header3,
@@ -20,7 +21,7 @@ export default ({
 }) => (
   <TalkRow>
     <TalkRowDivider>
-      <Header3>{_time(startDate)}</Header3>
+      <Header3>{dateUtils.formattedTime(startDate)}</Header3>
     </TalkRowDivider>
     <TalkRowContent>
       <Link to={`/talks/${id}`}>

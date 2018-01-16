@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as styles from "./main_style";
 import * as speakers from "./speakers";
+import headerBackground from "./images/cadec-2018-header.jpg";
 
 const FlexMain = styled.div`
   ${styles.FlexMainStyle};
@@ -11,12 +12,21 @@ const FlexItem = styled.div`
   ${styles.FlexItemStyle};
 `;
 
+export const Container = FlexMain.extend``;
+
 export const MainContainer = FlexMain.extend`
   ${styles.MainContainerStyle};
+  font-family: "Adobe Caslon Pro";
+  font-weight: normal;
+  font-style: normal;
 `;
 
 export const HeaderContainer = FlexItem.extend`
   ${styles.HeaderContainerStyle};
+  background-blend-mode: multiply;
+  background-image: url('${headerBackground}');
+  background-size: 100% 100%;
+  background-color: rgb(65, 66, 141);
 `;
 
 export const HeaderText = styled.span`
@@ -48,6 +58,7 @@ export const Header4 = styled.span`
 `;
 
 export const Text4 = styled.span`
+  flex: 0 1 60%;
   ${styles.Text4};
 `;
 
@@ -67,20 +78,25 @@ export const AboutDescription = styled.div`
 
 export const ContentContainer = FlexItem.extend`
   ${styles.ContentContainerStyle};
+  color: #000;
   overflow-x: auto;
 `;
 
 // ---- tabs
 export const TabContainer = styled.div`
   ${styles.TabContainerStyle};
+  border-top: 1px solid rgb(115, 195, 182);
 `;
 
 export const TabButton = styled.div`
   ${styles.TabButton};
+  font-family: "Interstate";
+  &:hover {
+    background-color: rgb(202, 232, 227);
+  }
 `;
 
 // ---- talks
-
 export const TalkRow = styled.div`
   ${styles.TalkRow};
 `;
@@ -91,6 +107,16 @@ export const TalkRowDivider = styled.div`
 
 export const TalkRowContent = styled.div`
   ${styles.TalkRowContent};
+  &:hover {
+    background-color: rgba(202, 200, 227, 0.3);
+  }
+  a:link,
+  a:visited,
+  a.active,
+  a.hover {
+    text-decoration: none;
+    color: #000;
+  }
 `;
 
 export const TalkRowText = styled.div`
@@ -100,6 +126,8 @@ export const TalkRowText = styled.div`
 export const SpeakerImage = styled.div`
   ${speakers.SpeakerImage};
   background-image: url('${speakers.getImage}')
+  background-size: cover;
+  background-position: center;
 `;
 
 // ---- talk details
@@ -120,6 +148,7 @@ export const TalkDetailsSpeakerName = styled.span`
 `;
 export const TalkDetailHeaderDivider = styled.hr`
   ${styles.TalkDetailHeaderDivider};
+  border-top: 1px dotted grey;
 `;
 // ---- buttons
 export const SelectionButton = styled.button`

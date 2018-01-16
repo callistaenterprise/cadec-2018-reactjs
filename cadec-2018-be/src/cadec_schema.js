@@ -51,7 +51,6 @@ const resolvers = {
   },
   Event: {
     talks: (args, { tags = "", period }) => {
-      console.log("-----tags", tags, period);
       tags = R.replace(/\*/g, "", tags);
       return R.pipe(
         R.propOr({}, "talks"),

@@ -7,7 +7,14 @@
   "license": "MIT",
   "dependencies": {
     "@expo/vector-icons": "^6.2.2",
+    "color": "^0.11.1",
+    "expo": "^22.0.0",
+    "gl-react": "^3.13.0",
+    "gl-react-color-blending": "^2.0.5",
+    "gl-react-expo": "^3.6.0",
     "prettier": "^1.9.2",
+    "react-native-easy-markdown": "^1.1.9",
+    "react-native-hr-plus": "^1.0.3",
     "react-styled-flexbox": "^1.0.4",
     "styled-components": "^2.4.0"
   }

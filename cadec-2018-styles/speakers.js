@@ -6,6 +6,7 @@ import parwenaker from "./images/parwenaker.jpg";
 import peterlarsson from "./images/peterlarsson.jpg";
 import stephenwhite from "./images/stephenwhite.jpg";
 import torbjornclaesson from "./images/torbjornclaesson.jpg";
+import fika from "./images/fika.jpg";
 
 // ---- images
 const _images = {
@@ -16,17 +17,23 @@ const _images = {
   parwenaker,
   peterlarsson,
   stephenwhite,
-  torbjornclaesson
+  torbjornclaesson,
+  fika
 };
-export const getImage = props => {
-  console.log("---", props, _images[props.speaker]);
-  return _images[props.speaker];
-};
+export const getImage = props => _images[props.speaker];
+
 export const SpeakerImage = `
   align-self: flex-end;
   width: 64px;
   height: 64px;
-  background-size: cover;
   border-radius: 32px;
-  background-position: center;
+`;
+
+export const SpeakerImageNative = `
+  flex: 0;
+  align-self: flex-end;
+  width: 64;
+  height: 64;
+  border-radius: 32;
+  resize-mode: cover;
 `;

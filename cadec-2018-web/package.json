@@ -5,6 +5,7 @@
   "dependencies": {
     "cadec-2018-api": "1.0.0",
     "cadec-2018-state": "1.0.0",
+    "cadec-2018-utils": "1.0.0",
     "cadec-2018-styles": "1.0.0",
     "moment": "^2.20.1",
     "prettier": "^1.9.2",

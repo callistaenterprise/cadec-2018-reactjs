@@ -1,5 +1,3 @@
-import headerBackground from "./images/cadec-2018-header.jpg";
-
 // ---- main styles
 export const FlexMainStyle = `
 display: flex;
@@ -13,9 +11,6 @@ export const FlexItemStyle = `
 export const MainContainerStyle = `
   flex-direction: column;
   justify-content: flex-start;
-  font-family: 'Adobe Caslon Pro';
-  font-weight: normal;
-  font-style: normal;
 `;
 
 export const HeaderContainerStyle = `
@@ -24,16 +19,8 @@ export const HeaderContainerStyle = `
   align-self: flex-start;
   justify-content: center;
   align-items: center;
-  flex: 0.6;
+  flex: 0.3;
   width: 100%;
-  background-color: rgb(65, 66, 141);
-  background-blend-mode: multiply;
-  background-image: url('${headerBackground}');
-  background-size: 100% 100%;
-
-  font-family: 'Interstate LightItalic';
-	font-weight: 300;
-  font-style: italic;
 `;
 
 export const HeaderItemStyle = `
@@ -45,13 +32,13 @@ export const HeaderItemStyle = `
 export const HeaderUnderSub = `
   padding-top: 30px;
   font-size: 20px;
-  font-family: 'Interstate LightCondensed';
+  font-family: 'Interstate';
   font-style: normal;
 `;
 
 export const HeaderUnderDate = `
   font-size: 15px;
-  font-family: 'Interstate LightCondensed';
+  font-family: 'Interstate';
   font-style: normal;
 `;
 
@@ -77,15 +64,21 @@ export const Header4 = `
   font-size: 12px;
   font-family: 'Interstate Bold';
   font-style: normal;
-  flex: 0 1
+  flex: 0.3 0
+`;
+
+export const Text3 = `
+  font-size: 15px;
+  font-family: 'Interstate';
+  font-style: normal;
 `;
 
 export const Text4 = `
-  flex: 0 1 60%;
   font-size: 12px;
   font-family: 'Interstate';
   font-style: normal;
   align-self: flex-start;
+  flex: 0.7 1
 `;
 
 export const TextRow = `
@@ -95,30 +88,33 @@ export const TextRow = `
   padding-top: 10px;
 `;
 
+export const FlexRow = `
+  flex: 1 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom:15px;
+`;
+
 export const TalkRow = `
+  flex: 1 0;
   display: flex;
   flex-direction: column;
 `;
 
 export const TalkRowDivider = `
-  padding-top: 20px;
   background-color: rgb(115, 195, 182);
-  padding: 5px;
+  padding: 15px;
+  height: 45;
 `;
 
 export const TalkRowContent = `
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px;
+  padding: 15px;
   background-color: rgb(202, 232, 227);
-  &:hover {
-    background-color: rgba(202, 200, 227, 0.3);
-  };
-  a:link, a:visited, a.active, a.hover {
-    text-decoration: none;
-    color: #000;
-  };
 `;
 
 export const TalkRowText = `
@@ -137,16 +133,14 @@ export const AboutDescription = `
   padding: 10px 0px;
   `;
 export const AboutInfo = `
-  background: rgb(216, 238, 234);
-  color: #000;
+  background-color: rgb(216, 238, 234);
   display: flex;
   flex-direction: column;
   padding: 10px;
 `;
 
 export const ContentContainerStyle = `
-  background: rgb(202, 232, 227);
-  color: #000;
+  background-color: rgb(202, 232, 227);
   flex: 2 0;
 `;
 
@@ -159,7 +153,6 @@ export const TabContainerStyle = `
   width: 100%;
   padding: 5px;
   background: rgb(216, 238, 234);
-  border-top: 1px solid rgb(115, 195, 182);
   `;
 
 export const TabButton = `
@@ -169,10 +162,6 @@ export const TabButton = `
   justify-content: center;
   align-items: center;
   width: 70px;
-  font-family: 'Interstate';
-  &:hover {
-    background-color:rgb(202, 232, 227);
-  }
 `;
 
 export const SelectionButtonStyle = `
@@ -195,9 +184,12 @@ export const SelectionButtonTextStyle = `
 
 // ---- talk details
 export const TalkDetailsContainer = `
+  background-color: rgb(202, 232, 227);
   padding: 10px;
  `;
 export const TalkDetailsSpeakerName = `
+  font-size: 20px;
+  font-family: 'Interstate LightItalic';
   padding-right: 10px;
  `;
 export const TalkDetailHeader = `
@@ -210,6 +202,5 @@ export const TalkDetailHeaderSpeaker = `
  `;
 
 export const TalkDetailHeaderDivider = `
-  border-top: 1px dotted grey;
   border-bottom: 0px;
 `;

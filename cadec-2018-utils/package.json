@@ -1,0 +1,12 @@
+{
+  "name": "cadec-2018-utils",
+  "version": "1.0.0",
+  "description": "General utils for cadec-2018 apps",
+  "main": "index.js",
+  "author": "stephen white",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.20.1",
+    "prettier": "^1.9.2"
+  }
+}

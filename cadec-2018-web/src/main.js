@@ -7,8 +7,8 @@ import Header from "./header";
 import Tabs from "./tabs_container";
 import About from "./about";
 import TalkDetails from "./talk_details";
+
 export default ({ data: { event } }) => {
-  console.log(event);
   return (
     <Router>
       <MainContainer>

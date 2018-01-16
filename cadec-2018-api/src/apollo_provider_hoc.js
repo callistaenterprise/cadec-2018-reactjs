@@ -6,7 +6,6 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { ReduxCache } from "apollo-cache-redux";
 
 export default store => {
-  console.log("----- store", store);
   const cache = store ? new ReduxCache({ store }) : new InMemoryCache();
   const client = new ApolloClient({
     link: new HttpLink({

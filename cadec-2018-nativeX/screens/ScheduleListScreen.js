@@ -46,10 +46,7 @@ class ScheduleListScreen extends React.Component {
         </View>
       );
     }
-    console.log("----", this.props.data.event.talks);
-    const sortedScheduleItems = _.chain(
-      this.props.data.event.talks.slice()
-    )
+    const sortedScheduleItems = _.chain(this.props.data.event.talks.slice())
       .sort(item => item.startDate)
       .value();
 
@@ -60,8 +57,9 @@ class ScheduleListScreen extends React.Component {
       .value();
 
     const items = _.groupBy(sortedScheduleItems, item => item.startDate);
-    const itemsByPeriod = _.groupBy(sortedScheduleItems, item =>
-      parseCustomDateString(item.startDate).getHours() < 15 ? 1 : 2
+    const itemsByPeriod = _.groupBy(
+      sortedScheduleItems,
+      item => (parseCustomDateString(item.startDate).getHours() < 15 ? 1 : 2)
     );
     const eventsForEarly = _.groupBy(
       _.sortBy(itemsByPeriod[1], item => item.startDate),
@@ -72,16 +70,14 @@ class ScheduleListScreen extends React.Component {
       _.sortBy(itemsByPeriod[2], item => item.startDate),
       item => item.startDate
     );
+    console.log("----");
     const sections = [];
     let events =
-      this.state.selectedDay === "Early"
-        ? eventsForEarly
-        : eventsForLater;
-    console.log("-----", itemsByPeriod, eventsForEarly, eventsForLater)
+      this.state.selectedDay === "Early" ? eventsForEarly : eventsForLater;
     Object.keys(events).forEach(date => {
       sections.push({ key: date, data: events[date] });
     });
-
+    console.log("********** sections", JSON.stringify(sections, null, 2));
     return (
       <View style={styles.container}>
         <SectionList
@@ -118,6 +114,7 @@ class ScheduleListScreen extends React.Component {
   };
 
   _renderSectionHeader = ({ section }) => {
+    console.log("********* section", section);
     return <ScheduleSectionHeader date={section.key} />;
   };
 
@@ -201,7 +198,7 @@ class HeaderComponent extends React.Component {
               backgroundColor: "transparent"
             }}
           >
-            Cadec 2018 
+            Cadec 2018
           </Text>
         </View>
 

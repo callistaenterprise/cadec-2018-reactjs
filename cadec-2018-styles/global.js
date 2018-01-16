@@ -26,23 +26,16 @@ export const globalStyle = injectGlobal`
 }
 
 @font-face {
-	font-family: 'Adobe Caslon Pro';
-	src: url('${ACaslonProItalic_woff}') format('woff');
-	font-weight: normal;
-	font-style: italic;
+	font-family: 'Interstate Bold';
+	src: url('${InterstateBold_woff}') format('woff');
+	font-weight: bold;
+	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Interstate LightCondensed';
 	src: url('${InterstateLightCondensed_woff}') format('woff'), url('${InterstateLightCondensed_ttf}') format('truetype');
 	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Adobe Caslon Pro';
-	src: url('${ACaslonProBold_woff}') format('woff');
-	font-weight: bold;
 	font-style: normal;
 }
 
@@ -55,17 +48,25 @@ export const globalStyle = injectGlobal`
 
 @font-face {
 	font-family: 'Adobe Caslon Pro';
+	src: url('${ACaslonProItalic_woff}') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Adobe Caslon Pro';
+	src: url('${ACaslonProBold_woff}') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Adobe Caslon Pro';
 	src: url('${ACaslonProRegular_woff}') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'Interstate Bold';
-	src: url('${InterstateBold_woff}') format('woff');
-	font-weight: bold;
-	font-style: normal;
-}
 
 @font-face {
 	font-family: 'SparTakus';
