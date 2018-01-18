@@ -7,7 +7,10 @@ import * as listUtils from "./list_utils";
 export default class Talks extends React.Component {
   static navigationOptions = {};
   render() {
-    const { screenProps: { talks = [], ...rest }, navigation } = this.props;
+    const {
+      screenProps: { event: { talks = [], ...rest } },
+      navigation
+    } = this.props;
     const sectionTalks = listUtils.talksToSections(talks);
     return (
       <View

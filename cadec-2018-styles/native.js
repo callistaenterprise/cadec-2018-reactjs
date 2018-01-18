@@ -4,7 +4,8 @@ import {
   StyleSheet,
   Image,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  ActivityIndicator
 } from "react-native";
 import { Link } from "react-router-native";
 import styled from "styled-components/native";
@@ -13,22 +14,37 @@ import * as styles from "./main_style";
 import * as speakers from "./speakers";
 export { default as LoadFontsHoc } from "./native_fonts";
 import headerBackground from "./images/cadec-2018-header-native.jpg";
+import SpinnerWhileLoading from "./spinner_while_loading";
+
+const ActivityContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+`;
+const ActivityIndicatorStyled = styled.ActivityIndicator`
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+`;
+
+export const Spinner = () => (
+  <ActivityContainer>
+    <ActivityIndicatorStyled size={"large"} color={"#86C1B6"} />
+  </ActivityContainer>
+);
+
+export const LoadingSpinner = SpinnerWhileLoading(Spinner);
 
 const { width: WINDOW_WIDTH } = Dimensions.get("window");
 
-const FlexMain = styled.View`
-  ${styles.FlexMainStyle};
-`;
+const FlexMain = styled.View`${styles.FlexMainStyle};`;
 
-const FlexItem = styled.Text`
-  ${styles.FlexItemStyle};
-`;
+const FlexItem = styled.Text`${styles.FlexItemStyle};`;
 
 export const Container = FlexMain.extend``;
 
-export const MainContainer = FlexMain.extend`
-  ${styles.MainContainerStyle};
-`;
+export const MainContainer = FlexMain.extend`${styles.MainContainerStyle};`;
 
 export const HeaderContainer = FlexMain.extend`
   ${styles.HeaderContainerStyle};
@@ -94,89 +110,51 @@ export const HeaderUnderSub = styled.Text`
 `;
 
 // ---- Header text
-export const Header1 = styled.Text`
-  ${styles.Header1};
-`;
+export const Header1 = styled.Text`${styles.Header1};`;
 
-export const Header3 = styled.Text`
-  ${styles.Header3};
-`;
+export const Header3 = styled.Text`${styles.Header3};`;
 
-export const Header4 = styled.Text`
-  ${styles.Header4};
-`;
+export const Header4 = styled.Text`${styles.Header4};`;
 
-export const Text3 = styled.Text`
-  ${styles.Text3};
-`;
+export const Text3 = styled.Text`${styles.Text3};`;
 
-export const Text4 = styled.Text`
-  ${styles.Text4};
-`;
+export const Text4 = styled.Text`${styles.Text4};`;
 
-export const TextRow = styled.View`
-  ${styles.TextRow};
-`;
+export const TextRow = styled.View`${styles.TextRow};`;
 
 export const ContentContainer = styled.ScrollView`
   ${styles.ContentContainerStyle};
 `;
 
 // ---- about
-export const AboutInfo = styled.View`
-  ${styles.AboutInfo};
-`;
+export const AboutInfo = styled.View`${styles.AboutInfo};`;
 
-export const AboutContainer = styled.View`
-  ${styles.AboutContainer};
-`;
+export const AboutContainer = styled.View`${styles.AboutContainer};`;
 
-export const AboutDescription = styled.View`
-  ${styles.AboutDescription};
-`;
+export const AboutDescription = styled.View`${styles.AboutDescription};`;
 
 // ---- tabs
-export const TabButton = styled.View`
-  ${styles.TabButton};
-`;
-export const TabContainer = FlexMain.extend`
-  ${styles.TabContainerStyle};
-`;
+export const TabButton = styled.View`${styles.TabButton};`;
+export const TabContainer = FlexMain.extend`${styles.TabContainerStyle};`;
 
 // ---- talks
 const _flex = ({ flex }) => (flex ? `flex: ${flex};` : "");
 
-export const Item = styled.View`
-  ${_flex};
-`;
+export const Item = styled.View`${_flex};`;
 
-export const LinkItem = styled(Link)`
-  ${_flex};
-`;
+export const LinkItem = styled(Link)`${_flex};`;
 
-export const TouchableOpacityItem = styled.TouchableOpacity`
-  ${_flex};
-`;
+export const TouchableOpacityItem = styled.TouchableOpacity`${_flex};`;
 
-export const TalkRow = styled.View`
-  ${styles.TalkRow};
-`;
+export const TalkRow = styled.View`${styles.TalkRow};`;
 
-export const FlexRow = styled.View`
-  ${styles.FlexRow};
-`;
+export const FlexRow = styled.View`${styles.FlexRow};`;
 
-export const TalkRowDivider = styled.View`
-  ${styles.TalkRowDivider};
-`;
+export const TalkRowDivider = styled.View`${styles.TalkRowDivider};`;
 
-export const TalkRowContent = styled.View`
-  ${styles.TalkRowContent};
-`;
+export const TalkRowContent = styled.View`${styles.TalkRowContent};`;
 
-export const TalkRowText = styled.View`
-  ${styles.TalkRowText};
-`;
+export const TalkRowText = styled.View`${styles.TalkRowText};`;
 
 // export const SpeakerImage = styled.View`
 //   ${speakers.SpeakerImage};
@@ -187,9 +165,7 @@ export const TalkRowText = styled.View`
 //   <Image style={nstyles.image} source={speakers.getImage({ speaker })} />
 // );
 
-export const SCImage = styled.Image`
-  ${speakers.SpeakerImageNative};
-`;
+export const SCImage = styled.Image`${speakers.SpeakerImageNative};`;
 
 export const SpeakerImage = ({ speaker }) => (
   <SCImage source={speakers.getImage({ speaker })} />
@@ -220,9 +196,7 @@ export const TalkDetailsContainer = styled.ScrollView`
   flex-direction: column;
 `;
 
-export const TalkDetailHeader = styled.Text`
-  ${styles.TalkDetailHeader};
-`;
+export const TalkDetailHeader = styled.Text`${styles.TalkDetailHeader};`;
 
 export const TalkDetailHeaderSpeaker = styled.Text`
   ${styles.TalkDetailHeaderSpeaker};

@@ -1,16 +1,20 @@
+import React from "react";
 import styled from "styled-components";
 import * as styles from "./main_style";
 import * as speakers from "./speakers";
 import headerBackground from "./images/cadec-2018-header.jpg";
+import SpinnerWhileLoading from "./spinner_while_loading";
+import Spinner from "react-spinkit";
+export const LoadingSpinner = SpinnerWhileLoading(() => (
+  <Spinner name={"three-bounce"} fadeIn={0}/>
+));
 
 const FlexMain = styled.div`
   ${styles.FlexMainStyle};
   height: 100vh;
 `;
 
-const FlexItem = styled.div`
-  ${styles.FlexItemStyle};
-`;
+const FlexItem = styled.div`${styles.FlexItemStyle};`;
 
 export const Container = FlexMain.extend``;
 
@@ -27,54 +31,34 @@ export const HeaderContainer = FlexItem.extend`
   background-image: url('${headerBackground}');
   background-size: 100% 100%;
   background-color: rgb(65, 66, 141);
+  flex: 0.45;
+  padding-top: 15px;
 `;
 
-export const HeaderText = styled.span`
-  ${styles.HeaderItemStyle};
-`;
+export const HeaderText = styled.span`${styles.HeaderItemStyle};`;
 
-export const HeaderUnderDate = styled.span`
-  ${styles.HeaderUnderDate};
-`;
+export const HeaderUnderDate = styled.span`${styles.HeaderUnderDate};`;
 
-export const HeaderUnderSub = styled.span`
-  ${styles.HeaderUnderSub};
-`;
+export const HeaderUnderSub = styled.span`${styles.HeaderUnderSub};`;
 
-export const Header1 = styled.span`
-  ${styles.Header1};
-`;
+export const Header1 = styled.span`${styles.Header1};`;
 
-export const Header2 = styled.span`
-  ${styles.Header2};
-`;
+export const Header2 = styled.span`${styles.Header2};`;
 
-export const Header3 = styled.span`
-  ${styles.Header3};
-`;
+export const Header3 = styled.span`${styles.Header3};`;
 
-export const Header4 = styled.span`
-  ${styles.Header4};
-`;
+export const Header4 = styled.span`${styles.Header4};`;
 
 export const Text4 = styled.span`
   flex: 0 1 60%;
   ${styles.Text4};
 `;
 
-export const TextRow = styled.div`
-  ${styles.TextRow};
-`;
+export const TextRow = styled.div`${styles.TextRow};`;
 
-export const AboutContainer = styled.div`
-  ${styles.AboutContainer};
-`;
-export const AboutInfo = styled.div`
-  ${styles.AboutInfo};
-`;
-export const AboutDescription = styled.div`
-  ${styles.AboutDescription};
-`;
+export const AboutContainer = styled.div`${styles.AboutContainer};`;
+export const AboutInfo = styled.div`${styles.AboutInfo};`;
+export const AboutDescription = styled.div`${styles.AboutDescription};`;
 
 export const ContentContainer = FlexItem.extend`
   ${styles.ContentContainerStyle};
@@ -97,13 +81,9 @@ export const TabButton = styled.div`
 `;
 
 // ---- talks
-export const TalkRow = styled.div`
-  ${styles.TalkRow};
-`;
+export const TalkRow = styled.div`${styles.TalkRow};`;
 
-export const TalkRowDivider = styled.div`
-  ${styles.TalkRowDivider};
-`;
+export const TalkRowDivider = styled.div`${styles.TalkRowDivider};`;
 
 export const TalkRowContent = styled.div`
   ${styles.TalkRowContent};
@@ -119,9 +99,7 @@ export const TalkRowContent = styled.div`
   }
 `;
 
-export const TalkRowText = styled.div`
-  ${styles.TalkRowText};
-`;
+export const TalkRowText = styled.div`${styles.TalkRowText};`;
 
 export const SpeakerImage = styled.div`
   ${speakers.SpeakerImage};
@@ -131,13 +109,9 @@ export const SpeakerImage = styled.div`
 `;
 
 // ---- talk details
-export const TalkDetailsContainer = styled.div`
-  ${styles.TalkDetailsContainer};
-`;
+export const TalkDetailsContainer = styled.div`${styles.TalkDetailsContainer};`;
 
-export const TalkDetailHeader = styled.div`
-  ${styles.TalkDetailHeader};
-`;
+export const TalkDetailHeader = styled.div`${styles.TalkDetailHeader};`;
 
 export const TalkDetailHeaderSpeaker = styled.span`
   ${styles.TalkDetailHeaderSpeaker};
@@ -151,9 +125,7 @@ export const TalkDetailHeaderDivider = styled.hr`
   border-top: 1px dotted grey;
 `;
 // ---- buttons
-export const SelectionButton = styled.button`
-  ${styles.SelectionButtonStyle};
-`;
+export const SelectionButton = styled.button`${styles.SelectionButtonStyle};`;
 export const SelectionButtonText = styled.span`
   ${styles.SelectionButtonTextStyle};
 `;

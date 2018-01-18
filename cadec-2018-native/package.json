@@ -7,7 +7,8 @@
     "jest-expo": "23.0.0",
     "metro-bundler-config-yarn-workspaces": "^1.0.0",
     "react-native-scripts": "1.8.1",
-    "react-test-renderer": "16.0.0"
+    "react-test-renderer": "16.0.0",
+    "prettier": "^1.9.2"
   },
   "main": "crna-entry.js",
   "scripts": {
@@ -26,11 +27,11 @@
     "cadec-2018-state": "1.0.0",
     "cadec-2018-styles": "1.0.0",
     "cadec-2018-utils": "1.0.0",
-    "expo": "^23.0.4",
     "moment": "^2.20.1",
     "ramda": "^0.25.0",
     "react": "16.0.0",
-    "react-native": "0.50.3",
+    "expo": "^24.0.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-24.0.0.tar.gz",
     "react-navigation": "^1.0.0-beta.26",
     "react-router": "^4.2.0",
     "react-router-native": "^4.2.0",

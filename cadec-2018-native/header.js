@@ -6,7 +6,7 @@ import {
   HeaderUnderSub,
   HeaderUnderDate
 } from "cadec-2018-styles/native";
-export default ({ screenProps: { title, title2, date } }) => {
+export default ({ screenProps: { event: { title, title2, date } } }) => {
   return (
     <HeaderContainer>
       <HeaderBackground />

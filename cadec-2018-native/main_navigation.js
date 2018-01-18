@@ -1,29 +1,18 @@
 import React from "react";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
-import { actions } from "cadec-2018-state";
-import { connect } from "react-redux";
 import { Ionicons } from "@expo/vector-icons";
 import { StackNavigator, TabNavigator, TabBarBottom } from "react-navigation";
-import { calc } from "cadec-2018-api";
-import Tabs from "./tabs_container";
 import About from "./about_stack";
 import TalksEarlier from "./talks_earlier_stack";
 import TalksLater from "./talks_later_stack";
 import {
-  MainContainer,
-  HeaderContainer,
-  ContentContainer,
-  TabContainer,
-  HeaderText,
-  SelectionButton,
-  SelectionButtonText,
-  LoadFontsHoc
+  MainContainer
 } from "cadec-2018-styles/native";
 
-export default ({ data: { event = {} } }) => {
+export default ({ data: { event = {}, loading}, ...rest}) => {
   return (
     <MainContainer>
-      <RootNavigator screenProps={event} />
+      <RootNavigator screenProps={{event, loading}} />
     </MainContainer>
   );
 };

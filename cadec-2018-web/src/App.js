@@ -7,4 +7,7 @@ import global from "cadec-2018-styles/global";
 
 const App = props => <MainContainer {...props} />;
 
-export default compose(ReduxProviderHoc, ApolloProviderHoc(store))(App);
+export default compose(
+  ReduxProviderHoc,
+  ApolloProviderHoc(store))
+(App);

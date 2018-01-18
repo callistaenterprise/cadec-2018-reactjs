@@ -8,13 +8,13 @@
   "dependencies": {
     "@expo/vector-icons": "^6.2.2",
     "color": "^0.11.1",
-    "expo": "^22.0.0",
-    "gl-react": "^3.13.0",
-    "gl-react-color-blending": "^2.0.5",
-    "gl-react-expo": "^3.6.0",
+    "expo": "^24.0.0",
     "prettier": "^1.9.2",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-24.0.0.tar.gz",
     "react-native-easy-markdown": "^1.1.9",
     "react-native-hr-plus": "^1.0.3",
+    "react-native-spinkit": "^1.1.1",
+    "react-spinkit": "^3.0.0",
     "react-styled-flexbox": "^1.0.4",
     "styled-components": "^2.4.0"
   }

@@ -3,8 +3,10 @@ import { StackNavigator } from "react-navigation";
 import { Icon } from "./list_utils";
 import Header from "./header";
 import About from "./about";
-
+import { LoadingSpinner } from "cadec-2018-styles/native";
 import { ContentContainer } from "cadec-2018-styles/native";
+
+const LoadingAbout = LoadingSpinner(({screenProps: {loading}}) => loading)(About);
 
 class AboutScreen extends React.Component {
   static navigationOptions = {
@@ -15,7 +17,7 @@ class AboutScreen extends React.Component {
   render() {
     return (
       <ContentContainer>
-        <About {...this.props} />
+        <LoadingAbout {...this.props} />
       </ContentContainer>
     );
   }

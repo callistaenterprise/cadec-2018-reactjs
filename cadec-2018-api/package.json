@@ -13,6 +13,7 @@
     "graphql-tag": "^2.6.0",
     "prettier": "^1.9.2",
     "react": "16.0.0",
-    "react-apollo": "^2.0.1"
+    "react-apollo": "^2.0.1",
+    "unfetch": "^3.0.0"
   }
 }

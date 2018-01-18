@@ -1,0 +1,40 @@
+{
+  "name": "cadec-2018-blessed",
+  "version": "1.0.0",
+  "description": "Blessed terminal for cadec-2018",
+  "main": "index.js",
+  "author": "stephen white",
+  "license": "MIT",
+  "scripts": {
+    "test": "test",
+    "build": "webpack",
+    "build:watch": "webpack --progress --watch",
+    "run": "node dist/bundle.js",
+    "start": "yarn build && node dist/bundle.js",
+    "serve": "serve"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.20.1",
+    "prettier": "^1.9.2",
+    "react": "^16.2.0",
+    "react-blessed": "^0.2.1",
+    "recompose": "^0.26.0",
+    "term.js": "^0.0.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "node-loader": "^0.6.0",
+    "pty.js": "^0.3.1",
+    "serve": "^6.4.8",
+    "webpack": "^3.10.0"
+  }
+}
