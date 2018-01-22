@@ -3,8 +3,7 @@ import { Dimensions, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { StackNavigator, TabNavigator, TabBarBottom } from "react-navigation";
 import About from "./about_stack";
-import TalksEarlier from "./talks_earlier_stack";
-import TalksLater from "./talks_later_stack";
+import Talks from "./talks_stack";
 import {
   MainContainer
 } from "cadec-2018-styles/native";
@@ -12,7 +11,7 @@ import {
 export default ({ data: { event = {}, loading}, ...rest}) => {
   return (
     <MainContainer>
-      <RootNavigator screenProps={{event, loading}} />
+      <RootNavigator screenProps={{event, loading }} />
     </MainContainer>
   );
 };
@@ -22,11 +21,8 @@ const RootNavigator = TabNavigator(
     About: {
       screen: About
     },
-    Early: {
-      screen: TalksEarlier
-    },
-    Later: {
-      screen: TalksLater
+    Talks: {
+      screen: Talks
     }
   },
   {

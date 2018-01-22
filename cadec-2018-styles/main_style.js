@@ -204,3 +204,9 @@ export const TalkDetailHeaderSpeaker = `
 export const TalkDetailHeaderDivider = `
   border-bottom: 0px;
 `;
+
+export const TalksContainer = `
+  background-color: rgb(202, 232, 227);
+  flex: 1;
+  align-self: stretch;
+`;

@@ -1,2 +1,3 @@
 import * as dateUtils from "./src/date_utils";
-export { dateUtils };
+import * as searchUtils from "./src/search_utils";
+export { dateUtils, searchUtils };

@@ -37,8 +37,10 @@ export const events = graphql(
     }
   `,
   {
-    options: ({ id = "cadec2018", tags = "*", period }) => ({
-      variables: { id, tags, period }
-    })
+    options: ({ id = "cadec2018", tags = "*", period }) => {
+      return {
+        variables: { id, tags, period }
+      };
+    }
   }
 );

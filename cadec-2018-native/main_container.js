@@ -1,15 +1,16 @@
 import React from "react";
-import { compose, withReducer, lifecycle, withProps, branch } from "recompose";
-import { connect } from "react-redux";
+import { compose, withProps } from "recompose";
 import { api } from "cadec-2018-api";
 import { selectors } from "cadec-2018-state";
+// import Main from "./main";
 import Main from "./main_navigation";
 
 const _mapStateToProps = (state, ownProps) => ({
-  period: selectors.getPeriod(state)
+  period: selectors.getPeriod(state),
+  tags: selectors.getTags(state)
 });
 
 export default compose(
-  connect(_mapStateToProps),
+  withProps(() => ({period:undefined})),
   api.events
 )(Main);

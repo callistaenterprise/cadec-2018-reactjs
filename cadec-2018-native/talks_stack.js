@@ -1,34 +1,38 @@
 import React from "react";
-import { TalkItem, TalkHeader } from "./talk_stack";
-import { View, Text, SectionList } from "react-native";
+import { StackNavigator } from "react-navigation";
+import { Icon } from "./list_utils";
+import TalkDetails from "./talk_details_stack";
+import Talks from "./talks_container";
 import Header from "./header";
-import * as listUtils from "./list_utils";
 
-export default class Talks extends React.Component {
-  static navigationOptions = {};
+class TalksStack extends React.Component {
+  static navigationOptions = ({ navigation }) => ({
+    tabBarLabel: "Talks",
+    // Note: By default the icon is only shown on iOS. Search the showIcon option below.
+  });
+  componentDidMount() {
+    this.props.navigation.setParams({
+      before: this.props.before
+    });
+  }
   render() {
-    const {
-      screenProps: { event: { talks = [], ...rest } },
-      navigation
-    } = this.props;
-    const sectionTalks = listUtils.talksToSections(talks);
-    return (
-      <View
-        style={{
-          flex: 1,
-          alignSelf: "stretch"
-        }}
-      >
-        <SectionList
-          removeClippedSubviews={false}
-          sections={sectionTalks}
-          onRefresh={listUtils.handleRefreshAsync}
-          refreshing={false}
-          renderSectionHeader={TalkHeader}
-          keyExtractor={item => item.id}
-          renderItem={props => <TalkItem {...props} navigation={navigation} />}
-        />
-      </View>
-    );
+    return <Talks {...this.props} />;
   }
 }
+export default StackNavigator(
+  {
+    Talks: {
+      screen: TalksStack
+    },
+    TalkDetails: {
+      screen: TalkDetails
+    }
+  },
+  {
+    headerMode: "screen",
+    navigationOptions: {
+      header: Header,
+      tabBarIcon: () => <Icon icon={"ios-contacts-outline"} />
+    }
+  }
+);

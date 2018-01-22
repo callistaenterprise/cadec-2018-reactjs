@@ -148,6 +148,8 @@ export const TouchableOpacityItem = styled.TouchableOpacity`${_flex};`;
 
 export const TalkRow = styled.View`${styles.TalkRow};`;
 
+export const TalksContainer = styled.View`${styles.TalksContainer};`;
+
 export const FlexRow = styled.View`${styles.FlexRow};`;
 
 export const TalkRowDivider = styled.View`${styles.TalkRowDivider};`;
