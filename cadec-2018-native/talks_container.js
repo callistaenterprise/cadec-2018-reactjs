@@ -1,5 +1,5 @@
 import React from "react";
-import { TalkItem, TalkHeader } from "./talk_stack";
+import { TalkItem, TalkHeaderContainer } from "./talk_stack";
 import { View, Text, SectionList } from "react-native";
 import { compose, withState, withProps, withStateHandlers } from "recompose";
 import * as listUtils from "./list_utils";
@@ -38,7 +38,7 @@ class Talks extends React.Component {
           sections={sectionTalks}
           onRefresh={listUtils.handleRefreshAsync}
           refreshing={false}
-          renderSectionHeader={TalkHeader}
+          renderSectionHeader={props => <TalkHeaderContainer {...props}/>}
           keyExtractor={item => item.id}
           renderItem={props => <TalkItem {...props} navigation={navigation} />}
         />

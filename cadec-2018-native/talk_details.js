@@ -1,4 +1,5 @@
 import React from "react";
+import { Constants } from "expo";
 import { compose, mapProps } from "recompose";
 import * as R from "ramda";
 import MarkdownRenderer from "react-native-markdown-renderer";
@@ -19,7 +20,7 @@ import {
 const TalkDetails = ({ title, description, time, start, speakers = [] }) => {
   return (
     <TalkDetailsContainer>
-      <TalkDetailHeader>{title}</TalkDetailHeader>
+      <TalkDetailHeader>{title}{Constants.deviceId}</TalkDetailHeader>
       <TalkDetailHeaderDivider />
       <Item>
         <Text4>{start}</Text4>

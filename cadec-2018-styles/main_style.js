@@ -58,6 +58,7 @@ export const Header3 = `
   font-size: 15px;
   font-family: 'Interstate Bold';
   font-style: normal;
+  flex: 1;
 `;
 
 export const Header4 = `
@@ -106,6 +107,10 @@ export const TalkRowDivider = `
   background-color: rgb(115, 195, 182);
   padding: 15px;
   height: 45;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 export const TalkRowContent = `

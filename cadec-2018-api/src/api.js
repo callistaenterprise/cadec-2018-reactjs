@@ -24,6 +24,11 @@ export const events = graphql(
           startDate
           eventId
           description
+          stars
+          deviceStars {
+            deviceId
+            stars
+          }
           speakers {
             name
             imageName
@@ -43,4 +48,54 @@ export const events = graphql(
       };
     }
   }
+);
+
+export const updateStars = graphql(
+  gql`
+    mutation UpdateStars(
+      $cadecId: String
+      $deviceId: String
+      $talkId: String
+      $stars: Float 
+    ) {
+      updateStars(
+        cadecId: $cadecId
+        deviceId: $deviceId
+        talkId: $talkId
+        stars: $stars
+      ) {
+        id
+        title
+        title2
+        address
+        latlng
+        afterCadec
+        shortDescription
+        date
+        dateText
+        time
+        description
+        talks {
+          id
+          title
+          startDate
+          eventId
+          description
+          stars
+          deviceStars {
+            deviceId
+            stars
+          }
+          speakers {
+            name
+            imageName
+            twitter
+            github
+            bio
+            avatarUrl
+          }
+        }
+      }
+    }
+  `
 );

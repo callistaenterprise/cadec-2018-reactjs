@@ -26,7 +26,13 @@ type Talk{
   eventId: String 
   description: String
   startDate: String
+  stars: Float 
+  deviceStars: [Star]
   speakers: [Speaker]
+}
+type Star{
+  deviceId: ID!
+  stars: Float 
 }
 type Speaker{
   id: ID!
@@ -41,6 +47,9 @@ type Query {
   event(id: String!): Event
   events: [Event]
 }
+type Mutation {
+  updateStars(cadecId: String, deviceId: String, talkId: String, stars: Float): Event
+}
 `;
 
 // Provide resolver functions for your schema fields
@@ -48,6 +57,14 @@ const resolvers = {
   Query: {
     event: (root, { id }, context) => eventsDynamo.getEvent(id),
     events: (root, args, context) => eventsDynamo.getEvents()
+  },
+  Mutation: {
+    updateStars: (_, { cadecId, talkId, deviceId, stars }) => {
+      console.log("--- props", cadecId, deviceId, talkId, stars);
+      const event = eventsDynamo.updateStars(cadecId, talkId, deviceId, stars);
+      console.log("----- event", JSON.stringify(event, null, 2));
+      return event;
+    }
   },
   Event: {
     talks: (args, { tags = "", period }) => {
@@ -93,7 +110,28 @@ const resolvers = {
     }
   },
   Talk: {
-    speakers: R.propOr([], "speakers")
+    speakers: R.propOr([], "speakers"),
+    stars: R.pipe(
+      R.propOr({}, "stars"),
+      R.values,
+      R.reduce(
+        (acc, val) => ({ stars: acc.stars + val, count: acc.count + 1 }),
+        { stars: 0, count: 0 }
+      ),
+      starAcc => {
+        return starAcc.stars > 0 ? starAcc.stars / starAcc.count : 0;
+      }
+    ),
+    deviceStars: ({stars = {}}) => {
+      const deviceStars = R.pipe(
+        R.keys,
+        R.reduce(
+          (acc, key) => ([...acc, { deviceId: key, stars: stars[key] }]),
+          []
+        )
+      )(stars);
+      return deviceStars;
+    }
   }
 };
 

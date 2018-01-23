@@ -141,17 +141,14 @@ export async function deleteEntity(tableName, id, idName = "id") {
     });
 }
 
-export async function updateEntity(tableName, entity, idName = "id") {
-  // set an id if not set
-  if (!entity[idName])
-    throw new Error("Id was null when trying to update an entity");
-  console.log("--- update entity", JSON.stringify(entity));
-  const params = {
-    TableName: tableName,
-    Item: entity
-  };
+export async function updateItem(params) {
   return docClient
-    .put(params)
+    .update(params)
     .promise()
-    .then(() => entity);
+    .then((data, err) => {
+      if(err){
+        console.error("UpdateItem failed!!", JSON.stringify(err));
+      }
+      return data.Attributes;
+    });
 }

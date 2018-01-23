@@ -11,6 +11,8 @@ const _mapStateToProps = (state, ownProps) => ({
 });
 
 export default compose(
-  withProps(() => ({period:undefined})),
+  withProps(() => ({
+    period:undefined
+  })),
   api.events
 )(Main);
