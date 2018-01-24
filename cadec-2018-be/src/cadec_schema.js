@@ -26,7 +26,9 @@ type Talk{
   eventId: String 
   description: String
   startDate: String
-  stars: Float 
+  stars: Float
+  totalStars: Float
+  totalDevices: Int
   deviceStars: [Star]
   speakers: [Speaker]
 }
@@ -122,15 +124,26 @@ const resolvers = {
         return starAcc.stars > 0 ? starAcc.stars / starAcc.count : 0;
       }
     ),
-    deviceStars: ({stars = {}}) => {
+    deviceStars: ({ stars = {} }) => {
       const deviceStars = R.pipe(
         R.keys,
         R.reduce(
-          (acc, key) => ([...acc, { deviceId: key, stars: stars[key] }]),
+          (acc, key) => [...acc, { deviceId: key, stars: stars[key] }],
           []
         )
       )(stars);
       return deviceStars;
+    },
+    totalStars: ({ stars = {} }) => {
+      const totalStars = R.pipe(
+        R.keys,
+        R.reduce((acc, key) => acc + stars[key], 0)
+      )(stars);
+      return totalStars;
+    },
+    totalDevices: ({ stars = {} }) => {
+      const totalDevices = R.keys(stars).length;
+      return totalDevices;
     }
   }
 };

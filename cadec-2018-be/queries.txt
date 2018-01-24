@@ -1,0 +1,40 @@
+query{
+  event(id: "cadec2018"){
+    talks{
+      title
+      stars
+      deviceStars{
+        deviceId
+        stars
+      },
+      totalStars,
+      totalDevices
+    }
+  }
+}
+
+
+mutation{
+  updateStars(cadecId: "cadec2018", deviceId: "sw1", talkId:"1", stars:5){
+    talks{
+      title
+      totalStars
+      totalDevices
+    }
+  }
+}
+
+query{
+  event(id: "cadec2018"){
+    talks{
+      title
+      stars
+      totalStars
+      totalDevices
+      deviceStars{
+        deviceId
+        stars
+      }
+    }
+  }
+}
