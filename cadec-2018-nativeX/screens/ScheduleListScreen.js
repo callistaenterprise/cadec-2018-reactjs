@@ -132,7 +132,7 @@ class ScheduleListScreen extends React.Component {
 
 export default graphql(gql`
   {
-    event(id: "cadec2018") {
+    event(id: "cadec2018-stockholm") {
       talks(tags: "*") {
         id
         title

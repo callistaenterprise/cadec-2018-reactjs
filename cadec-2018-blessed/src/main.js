@@ -10,12 +10,12 @@ const stylesheet = {
     },
     style: {
       border: {
-        fg: "blue"
+        fg: "green"
       }
     }
   }
 };
-export default ({ data: { event }, currentTab, tabSelection }) => {
+export default ({ data: { event, refetch }, currentTab, tabSelection }) => {
   return (
     <element>
       <ContentContainer
@@ -23,7 +23,11 @@ export default ({ data: { event }, currentTab, tabSelection }) => {
         tabSelection={tabSelection}
         currentTab={currentTab}
       />
-      <Tabs currentTab={currentTab} tabSelection={tabSelection} />
+      <Tabs
+        currentTab={currentTab}
+        tabSelection={tabSelection}
+        refetch={refetch}
+      />
     </element>
   );
 };
@@ -49,6 +53,8 @@ const _getTab = currentTab => {
       return About;
     case "Talks":
       return Talks;
+    case "Stats":
+      return Stats;
     default:
       return About;
   }
@@ -59,9 +65,44 @@ const About = ({ event = {} }) => (
   </text>
 );
 
+const _avStars = (totalStars, totalDevices) =>
+  totalDevices > 0 ? totalStars / totalDevices : 0;
+
+const _talkStats = (talks = [], refetch) =>
+    talks.map(
+      (talk, i) =>
+          // `${talk.title} - ${_avStars(
+          //   talk.totalStars,
+          //   talk.totalDevices
+          // )} out of ${talk.totalDevices}`
+          <Progress key={`talk-${talk.id}`} index={i} label={talk.title} totalStars={talk.totalStars} totalDevices={talk.totalDevices}/>
+      );
+
+const Stats = ({ event = {} }) => (
+  <box class={stylesheet.bordered} width="100%" height="100%">
+    {_talkStats(event.talks)}
+{/*    <list
+      class={{
+        border: { type: "line" },
+        style: { border: { fg: "blue" } }
+      }}
+      style={{
+        selected: { fg: "green", bg: "black" }
+      }}
+      interactive={false}
+      mouse={false}
+      height="100%"
+      clickable={false}
+      keys={false}
+      items={_talkStats(event.talks)}
+    />*/}
+  </box>
+);
+
 const _talkTitles = talks => talks.map(talk => talk.title);
 
-const _talkForTitle = (talks = [], talkTitle) => R.find(R.propEq("title", talkTitle))(talks);
+const _talkForTitle = (talks = [], talkTitle) =>
+  R.find(R.propEq("title", talkTitle))(talks);
 class Talks extends Component {
   constructor(props) {
     super(props);
@@ -86,11 +127,9 @@ class Talks extends Component {
           clickable={true}
           keys={true}
           items={_talkTitles(event.talks)}
-          onSelect={
-            props => {
-              this.setState({ selectedTalk: props.content });
-            }
-          }
+          onSelect={props => {
+            this.setState({ selectedTalk: props.content });
+          }}
         />
         <box
           class={{
@@ -99,8 +138,9 @@ class Talks extends Component {
           }}
           scrollable={true}
           top="50%"
-          height="50%">
-        <text>{talk && talk.description}</text>
+          height="50%"
+        >
+          <text>{talk && talk.description}</text>
         </box>
       </box>
     );
@@ -114,7 +154,7 @@ const Talk = talk => (
   </box>
 );
 
-const Tabs = ({ currentTab, tabSelection }) => (
+const Tabs = ({ currentTab, tabSelection, refetch }) => (
   <box
     label="Tabs"
     class={stylesheet.bordered}
@@ -123,16 +163,24 @@ const Tabs = ({ currentTab, tabSelection }) => (
     height="20%"
   >
     <TabButton
-      width="40%"
+      width="25%"
       label="About"
       text="About"
       tabSelection={tabSelection}
     />
     <TabButton
-      width="40%"
-      left="50%"
+      width="25%"
+      left="33%"
       label="Talks"
       text="Talks"
+      tabSelection={tabSelection}
+    />
+    <TabButton
+      width="25%"
+      left="66%"
+      label="Stats"
+      text="Stats"
+      refetch={refetch}
       tabSelection={tabSelection}
     />
   </box>
@@ -140,7 +188,8 @@ const Tabs = ({ currentTab, tabSelection }) => (
 
 class TabButton extends Component {
   render() {
-    const { label, text, width, left, tabSelection } = this.props;
+    const { label, text, width, left, tabSelection, refetch} = this.props;
+    let interval;
     return (
       <box
         mouse={true}
@@ -148,6 +197,12 @@ class TabButton extends Component {
         keys={true}
         onClick={() => {
           tabSelection(label);
+          if( refetch) {
+            interval && clearInterval(interval);
+            interval = setInterval(() => {
+              refetch();
+            }, 2000);
+          }
         }}
         label={label}
         class={stylesheet.bordered}
@@ -157,5 +212,28 @@ class TabButton extends Component {
         {text}
       </box>
     );
+  }
+}
+
+class Progress extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {color: 'blue'};
+  }
+
+  render() {
+    const {index, label, totalStars, totalDevices} = this.props;
+    const progress = ( totalStars / totalDevices ) * (100 / 5);
+    const top = `${index * 10}%`;
+    const title = `${label} - votes ${totalDevices}, total stars ${totalStars}`
+    return <progressbar label={title}
+                        onComplete={() => this.setState({color: 'green'})}
+                        class={stylesheet.bordered}
+                        filled={progress}
+                        top={top}
+                        width="90%"
+                        height="10%"
+                        style={{bar: {bg: this.state.color}}} />;
   }
 }

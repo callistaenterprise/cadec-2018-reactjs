@@ -31,14 +31,14 @@ export const HeaderItemStyle = `
 
 export const HeaderUnderSub = `
   padding-top: 30px;
-  font-size: 20px;
-  font-family: 'Interstate';
+  font-size: 18px;
+  font-family: 'Interstate Bold';
   font-style: normal;
 `;
 
 export const HeaderUnderDate = `
-  font-size: 15px;
-  font-family: 'Interstate';
+  font-size: 18px;
+  font-family: 'Interstate Bold';
   font-style: normal;
 `;
 

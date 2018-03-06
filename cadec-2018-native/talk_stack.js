@@ -81,15 +81,15 @@ export const TalkHeaderContainer = compose(
   withHandlers({
     updateStars: ({ updateTalkStars, mutate, section: { data } }) => stars => {
       const item = data[0];
-      console.log("***** item", item.id, stars);
       mutate({
         variables: {
-          cadecId: "cadec2018",
+          cadecId: "cadec2018-stockholm",
           talkId: item.id,
           deviceId: Constants.deviceId,
           stars
         }
-      }).then(res => {
+      });
+        /*.then(res => {
         console.log(res);
         const stars = R.pipe(
           R.pathOr([], ["data", "updateStars", "talks"]),
@@ -100,7 +100,8 @@ export const TalkHeaderContainer = compose(
         )(res);
         console.log("---- stars", stars);
         updateTalkStars(stars);
-      });
+      });*/
+      updateTalkStars(stars);
     }
   })
 )(TalkHeader);

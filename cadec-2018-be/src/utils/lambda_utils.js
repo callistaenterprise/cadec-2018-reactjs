@@ -4,7 +4,7 @@ import R from "ramda";
 export async function wrapCallback(event, callback, fn) {
   try {
     const result = await fn(event);
-    console.log("---- callback result", JSON.stringify(result, null, 2));
+    // console.log("---- callback result", JSON.stringify(result, null, 2));
     callback(null, result);
   } catch (e) {
     callback(e, null);
@@ -13,12 +13,8 @@ export async function wrapCallback(event, callback, fn) {
 
 export async function wrapReducerCallback(event, callback, fn) {
   try {
-    console.log(event);
+    // console.log(event);
     const result = await fn(R.pathOr({}, ["body", "action"], event));
-    console.log(
-      "---- reducer callback result",
-      JSON.stringify(result, null, 2)
-    );
     callback(null, result);
   } catch (e) {
     callback(e, null);
@@ -27,7 +23,7 @@ export async function wrapReducerCallback(event, callback, fn) {
 
 export const baseLambda = service =>
   async function(event, context, callback) {
-    console.log("--- message event", JSON.stringify(event, null, 2));
+    // console.log("--- message event", JSON.stringify(event, null, 2));
     // pass the event through the reducer
     wrapCallback(event, callback, service);
   };
@@ -56,7 +52,7 @@ export async function invokeLambda(FunctionName, event, context) {
       FunctionName,
       Payload: JSON.stringify(event)
     };
-    console.log("--- invoke lambda", JSON.stringify(params, null, 2));
+    // console.log("--- invoke lambda", JSON.stringify(params, null, 2));
     return new Promise((resolve, reject) =>
       lambda.invoke(params, promiseCb(resolve, reject))
     );

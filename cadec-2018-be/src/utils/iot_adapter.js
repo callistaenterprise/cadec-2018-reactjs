@@ -2,7 +2,7 @@ import AWS from 'aws-sdk';
 
 export default ({endpoint, topic}) => {
   const iotData = new AWS.IotData({endpoint});
-  console.log('--- iotData', endpoint, topic);
+  // console.log('--- iotData', endpoint, topic);
   return {
     publish: async payload => {
       const cb = (err, data) => {

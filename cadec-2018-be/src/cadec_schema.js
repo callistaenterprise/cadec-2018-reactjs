@@ -62,9 +62,9 @@ const resolvers = {
   },
   Mutation: {
     updateStars: (_, { cadecId, talkId, deviceId, stars }) => {
-      console.log("--- props", cadecId, deviceId, talkId, stars);
+      // console.log("--- props", cadecId, deviceId, talkId, stars);
       const event = eventsDynamo.updateStars(cadecId, talkId, deviceId, stars);
-      console.log("----- event", JSON.stringify(event, null, 2));
+      // console.log("----- event", JSON.stringify(event, null, 2));
       return event;
     }
   },
@@ -97,7 +97,7 @@ const resolvers = {
                     R.prop("speakers"),
                     R.filter(R.propSatisfies(R.test(new RegExp(tags)), "name")),
                     // speakers => {
-                    //   console.log("---after filter", speakers);
+                    //   // console.log("---after filter", speakers);
                     //   return speakers;
                     // },
                     R.complement(R.isEmpty)

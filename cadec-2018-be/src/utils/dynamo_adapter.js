@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 let docClient;
 // connect to local DB if running offline
 if (process.env.IS_OFFLINE) {
-  console.log("--- Dynamo is local!");
+  // console.log("--- Dynamo is local!");
   docClient = new aws.DynamoDB.DocumentClient({
     region: "localhost",
     endpoint: "http://localhost:8000"
@@ -57,13 +57,13 @@ export async function getRelatedEntities(
     ),
     ExpressionAttributeValues: buildExpressionAttibuteValues(keyName, keyValues)
   };
-  console.log("--- params", JSON.stringify(params, null, 2));
+  // console.log("--- params", JSON.stringify(params, null, 2));
 
   return docClient
     .scan(params)
     .promise()
     .then(data => {
-      console.log("--- getRelatedEntities", tableName); //, JSON.stringify(data), JSON.stringify(data.Items));
+      // console.log("--- getRelatedEntities", tableName); //, JSON.stringify(data), JSON.stringify(data.Items));
       return data.Items;
     });
 }
@@ -73,13 +73,13 @@ export async function getEntities(tableName, attributesToGet) {
     TableName: tableName,
     ...(attributesToGet ? { AttributesToGet: attributesToGet } : {})
   };
-  console.log("--- getEntities", params);
+  // console.log("--- getEntities", params);
 
   return docClient
     .scan(params)
     .promise()
     .then(data => {
-      console.log("--- getEntities", tableName);
+      // console.log("--- getEntities", tableName);
       return data.Items;
     });
 }
@@ -96,14 +96,14 @@ export async function getEntity(tableName, id, attributesToGet) {
     .get(params)
     .promise()
     .then(data => {
-      console.log("---getEntity", tableName);
+      // console.log("---getEntity", tableName);
       return data && data.Item;
     });
 }
 
 export async function createEntity(tableName, entity) {
   // set an id if not set
-  console.log("--- createEntity", entity);
+  // console.log("--- createEntity", entity);
   const createdAt = new Date();
   entity = { ...entity, id: entity.id ? entity.id : v4() };
   entity = { ...entity, createdAt: createdAt.getTime() };
@@ -111,7 +111,7 @@ export async function createEntity(tableName, entity) {
     TableName: tableName,
     Item: entity
   };
-  console.log("--- entity params", JSON.stringify(params));
+  // console.log("--- entity params", JSON.stringify(params));
   return docClient
     .put(params)
     .promise()

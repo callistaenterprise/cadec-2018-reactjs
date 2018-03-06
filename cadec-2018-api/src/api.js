@@ -29,6 +29,8 @@ export const events = graphql(
             deviceId
             stars
           }
+          totalStars
+          totalDevices
           speakers {
             name
             imageName
@@ -42,7 +44,7 @@ export const events = graphql(
     }
   `,
   {
-    options: ({ id = "cadec2018", tags = "*", period }) => {
+    options: ({ id = "cadec2018-stockholm", tags = "*", period }) => {
       return {
         variables: { id, tags, period }
       };
@@ -86,6 +88,8 @@ export const updateStars = graphql(
             deviceId
             stars
           }
+          totalStars
+          totalDevices
           speakers {
             name
             imageName

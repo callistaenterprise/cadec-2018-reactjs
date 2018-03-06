@@ -199,5 +199,206 @@
     "time": "13.00 till 17.00 registrering från 12.30",
     "title": "Cadec 2018",
     "title2": "CALLISTA DEVELOPER’S CONFERENCE"
+  },
+  {
+    "address": "Filmstaden Sergel Hötorget 3  Stockholm",
+    "afterCadec":
+    "Enklare mat, dryck och mingel 17.00 - Callistas kontor  Drottninggatan 55 Stockholm",
+    "date": "2018-03-08",
+    "dateText": "torsdag 8 mars 2018",
+    "description":
+    "Vi nöjet att bjuda in till Stockholmsupplagan av Cadec – Callista Developers Conference.\n\nVi serverar de senaste trenderna inom arkitektur och utveckling och innehållet spänner över ett antal högaktuella områden. Som vanligt blir det demo och livekodning i många av presentationerna.\n\nNytt för i år är att Cadec Stockholm äger rum på Filmstaden Sergel. Där får vi gott om plats för vår växande publik och hoppas kunna erbjuda en presentationsupplevelse utöver det vanliga.\n\nDu är också inbjuden till After Cadec - varva ner efter konferensen med enklare mat, dryck och mingel.\n\nKonferensen är som vanligt kostnadsfri.\n\nAntalet platser är begränsat - anmäl dig redan idag för att inte missa denna chans till gratis kompetensutveckling.\n\n[Cadec 2018 Utvärdering Stockhom](https://goo.gl/forms/rlwli8vf6HusqLkI3)",
+    "id": "cadec2018-stockholm",
+    "latlng": "57.702244,11.986245",
+    "place": "Filmstaden Sergel Hötorget 3  Stockholm",
+    "shortDescription":
+    "Cadec 2018 – med de senaste trenderna inom arkitektur och systemutveckling",
+    "talks": {
+      "1": {
+        "description": "Introduktion",
+        "eventId": "cadec2018-stockholm",
+        "id": 1,
+        "speakers": [
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/janvasternas.jpg",
+            "bio": "Katarina is great!",
+            "github": "github",
+            "id": 1,
+            "imageName": "katarinaaskdal",
+            "name": "Katarina Askdal ",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-03-08 13:00:00+01:00",
+        "title": "Introduktion",
+        "stars": {}
+      },
+      "2": {
+        "stars": {},
+        "description":
+        "AI, Deep Learning, Machine Learning – begreppen haglar. Vad är skillnaden, och vad behöver jag som mjukvaruutvecklare kunna och förstå för att kunna dra nytta av teknologin? Machine Learning och AI har funnits  i över 30 år, varför är det så hett nu? I detta föredrag försöker vi reda ut begreppen och räta ut frågetecknen. \n\nMachine Learning är ett väldigt brett område och kan användas i många tillämpningar - talsyntes, bildigenkänning, ekonomiska förutsägelser och optimering. Det innefattar allt från avancerad matematisk teori till enkla tumregler samt även mer praktiska problemområden som prestanda och testning.\n\nFöredraget reder ut de grundläggande koncepten och den teoretiska grunden, samt ger pekare till intressanta områden att fortsätta utbilda sig inom. Vi demonstrerar också hur ett konkret arbetsflöde kan se ut AI-plattformen H2O.",
+        "eventId": "cadec2018-stockholm",
+        "id": 2,
+        "speakers": [
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/niklasantoncic.jpg",
+            "bio": "Niclas is great!",
+            "github": "github",
+            "id": 1,
+            "imageName": "niklasantoncic",
+            "name": "Niklas Antoncic",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-03-08 13:08:00+01:00",
+        "title": "Machine Learning för dig som vill börja koda nu"
+      },
+      "3": {
+        "stars": {},
+        "description":
+        "En hel del har hänt sedan förra årets Cadec – Java 9 och Java EE 8 är släppta och på JavaOne talade man om fyra nya ledande principer för Javas utveckling framåt: ”Open, Evolving, Nimble & Scalable”. \n\nHar man hittat botemedlet på JVM:ens tillkortakommanden gällande fotavtryck i drift med avseende på minne och uppstartstid? \n\nHur ska innovationstakten inom ekosystemet öka?     \n\nUnder detta flashföredrag sammanfattar vi det viktigaste som hänt under det gångna året, försöker besvara ovanstående frågor samt tittar praktiskt på om problematiken med JVM:ens fotavtryck kvarstår.",
+        "eventId": "cadec2018-stockholm",
+        "id": 3,
+        "speakers": [
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/andreastell.jpg",
+            "bio": "Andreas is great!",
+            "github": "github",
+            "id": 2,
+            "imageName": "andreastell",
+            "name": "Andreas Tell",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-03-08 13:51:00+01:00",
+        "title":
+        "”Open, Evolving, Nimble & Scalable” – är Java redo för microservices?"
+      },
+      "4": {
+        "stars": {},
+        "description":
+        "Det har nog inte undgått någon att Apache Kafka trendar just nu. Vi fullkomligen bombarderas av artiklar om strömmande arkitektur, event-sourcing och SMACK-stack, för att bara nämna några områden där Apache Kafka spelar en betydande roll.  \n\nNu har även en första major version av Apache Kafka släppts. \n\nTillsammans skall vi reda ut vad en ”distributed commit log” faktiskt är för något. Några av frågorna vi belyser är \n\n * Hur fungerar den? \n\n * Vilka fallgropar finns? \n\n * Vad har detta med strömmar att göra? \n\n * Och framför allt, varför pratas det så mycket om detta nu? \n\nVi avslutar sedan med att använda våra nyvunna kunskaper för att bygga ett strömmande systemfrån grunden.",
+        "eventId": "cadec2018-stockholm",
+        "id": 4,
+        "speakers": [
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/torbjornclaesson.jpg",
+            "bio": "Torbjörn is great!",
+            "github": "github",
+            "id": 3,
+            "imageName": "torbjornclaesson",
+            "name": "Torbjörn Claesson",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-03-08 14:14:00+01:00",
+        "title": "Kafka i strömmen – så får du flyt på dina dataflöden"
+      },
+      "5": {
+        "stars": {},
+        "description": "FIKA",
+        "eventId": "cadec2018-stockholm",
+        "id": 5,
+        "speakers": [
+          {
+            "id": 31,
+            "imageName": "fika",
+            "name": "-"
+          }
+        ],
+        "startDate": "2018-03-08 14:49:00+01:00",
+        "title": "Fika"
+      },
+      "6": {
+        "stars": {},
+        "description":
+        "ReactJS har med sin ansats för att strukturera, testa och resonera kring kod, samt genom sin tonvikt på tillstånd och envägs dataflöden, utvecklats till ett föredöme inom frontend-utveckling. \n\nEn inte särskilt väl dold hemlighet i ReactJS är förmågan att skapa användargränssnitt på en stor mängd plattformar; webb, mobil (iOS, Android), desktop, terminal (faktiskt) och – något överraskande – hårdvara. \n\nDelad kod och gemensamma underliggande modeller/designprinciper bidrar till en verkligt mångsidig utvecklingsmiljö, där ett traditionellt webb/javascript-team kan utveckla mot många olika målmiljöer och plattformar. Vi utforskar detta genom några praktiska exempel samt visar på magin i en gemensam design för alla plattformar. ",
+        "eventId": "cadec2018-stockholm",
+        "id": 6,
+        "speakers": [
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/stephenwhite.jpg",
+            "bio": "Stephen is super!",
+            "github": "github",
+            "id": 4,
+            "imageName": "stephenwhite",
+            "name": "Stephen White",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-03-08 15:19:00+01:00",
+        "title": "ReactJS – en gemensam design för alla plattformar"
+      },
+      "7": {
+        "stars": {},
+        "description":
+        "“Finns det några GDPR-aspekter på det här projektet?” \n\nDet är en fråga som hörs allt oftare. \n\nGDPR – EU:s dataskyddsförordning – träder i kraft 25 maj 2018, och ersätter då personuppgiftslagen. Genom GDPR vill EU tvinga företag att ta ett helhetsgrepp på frågor som rör behandling av personuppgifter och personlig integritet. \n\nVarför ska du som utvecklare/arkitekt behöva bry dig om detta? \n\nVi gör en snabb överflygning av lagstiftningen och tittar på ett antal fall där den kommer att påverka arbetet för oss som sitter med arkitektur och kod. ",
+        "eventId": "cadec2018-stockholm",
+        "id": 7,
+        "speakers": [
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/bjorngenfors.jpg",
+            "bio": "Björn is great!",
+            "github": "github",
+            "id": 5,
+            "imageName": "bjorngenfors",
+            "name": "Björn Genfors",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-03-08 15:52:00+01:00",
+        "title": "Vad är GDPR och varför ska jag bry mig?"
+      },
+      "8": {
+        "stars": {},
+        "description":
+        "Bitcoin beskrivs av vissa som den största innovationen sedan Internet. På senare tid har det dock blivit tydligt att Bitcoin bara är en del i något ännu större, nämligen teknologin som ligger till grund för Bitcoin – blockkedjan. \n\nVi kommer att ge en introduktion till hur blockkedjan fungerar och vilken inverkan tekniken kan ha på den framtida samhällsutvecklingen. \n\nFöredraget beskriver också Ethereum, som förutom en Bitcoinliknande blockkedja även erbjuder en plattform (EVM) för distribuerade blockkedjeapplikationer, s.k. DApps eller smarta kontrakt. \n\nAvslutningsvis demonstrerar vi praktiskt hur utveckling och användning av smarta kontrakt går till.",
+        "eventId": "cadec2018-stockholm",
+        "id": 8,
+        "speakers": [
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/parwenaker.jpg",
+            "bio": "Pär is great!",
+            "github": "github",
+            "id": 6,
+            "imageName": "parwenaker",
+            "name": "Pär Wenåker",
+            "twitter": "twitter"
+          },
+          {
+            "avatarUrl":
+            "http://callistaenterprise.se/assets/medarbetare/peterlarsson.jpg",
+            "bio": "Peter is best!",
+            "github": "github",
+            "id": 7,
+            "imageName": "peterlarsson",
+            "name": "Peter Larsson",
+            "twitter": "twitter"
+          }
+        ],
+        "startDate": "2018-03-08 16:15:00+01:00",
+        "title":
+        "Blockkedjan – länken till smarta kontrakt och andra innovativa lösningar"
+      },
+      "9": {
+        "stars": {},
+        "description": "Slut! - [After Cadec på Callista Enterprise kontor, Drottninggatan 55, Stockholm, direkt efter konferensen från kl. 17.00](https://www.google.se/maps/place/Drottninggatan+55,+111+21+Stockholm/@59.333667,18.0591792,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d67543a287d:0xb6de19fcf0620b25!8m2!3d59.333667!4d18.0613679)",
+        "eventId": "cadec2018-stockholm",
+        "id": 9,
+        "speakers": [],
+        "startDate": "2018-03-08 17:00:00+01:00",
+        "title": "Slut! - After Cadec"
+      }
+    },
+    "time": "13.00 till 17.00 registrering från 12.30",
+    "title": "Cadec 2018",
+    "title2": "CALLISTA DEVELOPER’S CONFERENCE"
   }
 ]

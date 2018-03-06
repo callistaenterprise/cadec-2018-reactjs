@@ -55261,8 +55261,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.updateStars = exports.events = undefined;
 
-var _templateObject = _taggedTemplateLiteral(["\n    query event($id: String!, $tags: String, $period: String) {\n      event(id: $id) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks(tags: $tags, period: $period) {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "], ["\n    query event($id: String!, $tags: String, $period: String) {\n      event(id: $id) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks(tags: $tags, period: $period) {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "]),
-    _templateObject2 = _taggedTemplateLiteral(["\n    mutation UpdateStars(\n      $cadecId: String\n      $deviceId: String\n      $talkId: String\n      $stars: Float \n    ) {\n      updateStars(\n        cadecId: $cadecId\n        deviceId: $deviceId\n        talkId: $talkId\n        stars: $stars\n      ) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "], ["\n    mutation UpdateStars(\n      $cadecId: String\n      $deviceId: String\n      $talkId: String\n      $stars: Float \n    ) {\n      updateStars(\n        cadecId: $cadecId\n        deviceId: $deviceId\n        talkId: $talkId\n        stars: $stars\n      ) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "]);
+var _templateObject = _taggedTemplateLiteral(["\n    query event($id: String!, $tags: String, $period: String) {\n      event(id: $id) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks(tags: $tags, period: $period) {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          totalStars\n          totalDevices\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "], ["\n    query event($id: String!, $tags: String, $period: String) {\n      event(id: $id) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks(tags: $tags, period: $period) {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          totalStars\n          totalDevices\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "]),
+    _templateObject2 = _taggedTemplateLiteral(["\n    mutation UpdateStars(\n      $cadecId: String\n      $deviceId: String\n      $talkId: String\n      $stars: Float \n    ) {\n      updateStars(\n        cadecId: $cadecId\n        deviceId: $deviceId\n        talkId: $talkId\n        stars: $stars\n      ) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          totalStars\n          totalDevices\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "], ["\n    mutation UpdateStars(\n      $cadecId: String\n      $deviceId: String\n      $talkId: String\n      $stars: Float \n    ) {\n      updateStars(\n        cadecId: $cadecId\n        deviceId: $deviceId\n        talkId: $talkId\n        stars: $stars\n      ) {\n        id\n        title\n        title2\n        address\n        latlng\n        afterCadec\n        shortDescription\n        date\n        dateText\n        time\n        description\n        talks {\n          id\n          title\n          startDate\n          eventId\n          description\n          stars\n          deviceStars {\n            deviceId\n            stars\n          }\n          totalStars\n          totalDevices\n          speakers {\n            name\n            imageName\n            twitter\n            github\n            bio\n            avatarUrl\n          }\n        }\n      }\n    }\n  "]);
 
 var _reactApollo = __webpack_require__(140);
 
@@ -55281,7 +55281,7 @@ var _period = function _period(period) {
 var events = exports.events = (0, _reactApollo.graphql)((0, _graphqlTag2.default)(_templateObject), {
   options: function options(_ref) {
     var _ref$id = _ref.id,
-        id = _ref$id === undefined ? "cadec2018" : _ref$id,
+        id = _ref$id === undefined ? "cadec2018-stockholm" : _ref$id,
         _ref$tags = _ref.tags,
         tags = _ref$tags === undefined ? "*" : _ref$tags,
         period = _ref.period;
@@ -97162,7 +97162,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _mapStateToProps = function _mapStateToProps(state, ownProps) {
   return {
-    period: _cadec2018State.selectors.getPeriod(state),
+    period: undefined,
     currentTab: _cadec2018State.selectors.getCurrentTab(state)
   };
 };
@@ -97212,14 +97212,16 @@ var stylesheet = {
     },
     style: {
       border: {
-        fg: "blue"
+        fg: "green"
       }
     }
   }
 };
 
 exports.default = function (_ref) {
-  var event = _ref.data.event,
+  var _ref$data = _ref.data,
+      event = _ref$data.event,
+      refetch = _ref$data.refetch,
       currentTab = _ref.currentTab,
       tabSelection = _ref.tabSelection;
 
@@ -97231,7 +97233,11 @@ exports.default = function (_ref) {
       tabSelection: tabSelection,
       currentTab: currentTab
     }),
-    _react2.default.createElement(Tabs, { currentTab: currentTab, tabSelection: tabSelection })
+    _react2.default.createElement(Tabs, {
+      currentTab: currentTab,
+      tabSelection: tabSelection,
+      refetch: refetch
+    })
   );
 };
 
@@ -97259,6 +97265,8 @@ var _getTab = function _getTab(currentTab) {
       return About;
     case "Talks":
       return Talks;
+    case "Stats":
+      return Stats;
     default:
       return About;
   }
@@ -97270,6 +97278,34 @@ var About = function About(_ref3) {
     "text",
     { "class": stylesheet.bordered, width: "100%", height: "100%" },
     event.description
+  );
+};
+
+var _avStars = function _avStars(totalStars, totalDevices) {
+  return totalDevices > 0 ? totalStars / totalDevices : 0;
+};
+
+var _talkStats = function _talkStats() {
+  var talks = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var refetch = arguments[1];
+  return talks.map(function (talk, i) {
+    return (
+      // `${talk.title} - ${_avStars(
+      //   talk.totalStars,
+      //   talk.totalDevices
+      // )} out of ${talk.totalDevices}`
+      _react2.default.createElement(Progress, { key: "talk-" + talk.id, index: i, label: talk.title, totalStars: talk.totalStars, totalDevices: talk.totalDevices })
+    );
+  });
+};
+
+var Stats = function Stats(_ref4) {
+  var _ref4$event = _ref4.event,
+      event = _ref4$event === undefined ? {} : _ref4$event;
+  return _react2.default.createElement(
+    "box",
+    { "class": stylesheet.bordered, width: "100%", height: "100%" },
+    _talkStats(event.talks)
   );
 };
 
@@ -97338,7 +97374,8 @@ var Talks = function (_Component) {
             },
             scrollable: true,
             top: "50%",
-            height: "50%" },
+            height: "50%"
+          },
           _react2.default.createElement(
             "text",
             null,
@@ -97369,9 +97406,10 @@ var Talk = function Talk(talk) {
   );
 };
 
-var Tabs = function Tabs(_ref4) {
-  var currentTab = _ref4.currentTab,
-      tabSelection = _ref4.tabSelection;
+var Tabs = function Tabs(_ref5) {
+  var currentTab = _ref5.currentTab,
+      tabSelection = _ref5.tabSelection,
+      refetch = _ref5.refetch;
   return _react2.default.createElement(
     "box",
     {
@@ -97382,16 +97420,24 @@ var Tabs = function Tabs(_ref4) {
       height: "20%"
     },
     _react2.default.createElement(TabButton, {
-      width: "40%",
+      width: "25%",
       label: "About",
       text: "About",
       tabSelection: tabSelection
     }),
     _react2.default.createElement(TabButton, {
-      width: "40%",
-      left: "50%",
+      width: "25%",
+      left: "33%",
       label: "Talks",
       text: "Talks",
+      tabSelection: tabSelection
+    }),
+    _react2.default.createElement(TabButton, {
+      width: "25%",
+      left: "66%",
+      label: "Stats",
+      text: "Stats",
+      refetch: refetch,
       tabSelection: tabSelection
     })
   );
@@ -97414,8 +97460,10 @@ var TabButton = function (_Component2) {
           text = _props2.text,
           width = _props2.width,
           left = _props2.left,
-          tabSelection = _props2.tabSelection;
+          tabSelection = _props2.tabSelection,
+          refetch = _props2.refetch;
 
+      var interval = void 0;
       return _react2.default.createElement(
         "box",
         {
@@ -97424,6 +97472,12 @@ var TabButton = function (_Component2) {
           keys: true,
           onClick: function onClick() {
             tabSelection(label);
+            if (refetch) {
+              interval && clearInterval(interval);
+              interval = setInterval(function () {
+                refetch();
+              }, 2000);
+            }
           },
           label: label,
           "class": stylesheet.bordered,
@@ -97436,6 +97490,48 @@ var TabButton = function (_Component2) {
   }]);
 
   return TabButton;
+}(_react.Component);
+
+var Progress = function (_Component3) {
+  _inherits(Progress, _Component3);
+
+  function Progress(props) {
+    _classCallCheck(this, Progress);
+
+    var _this4 = _possibleConstructorReturn(this, (Progress.__proto__ || Object.getPrototypeOf(Progress)).call(this, props));
+
+    _this4.state = { color: 'blue' };
+    return _this4;
+  }
+
+  _createClass(Progress, [{
+    key: "render",
+    value: function render() {
+      var _this5 = this;
+
+      var _props3 = this.props,
+          index = _props3.index,
+          label = _props3.label,
+          totalStars = _props3.totalStars,
+          totalDevices = _props3.totalDevices;
+
+      var progress = totalStars / totalDevices * (100 / 5);
+      var top = index * 10 + "%";
+      var title = label + " - votes " + totalDevices + ", total stars " + totalStars;
+      return _react2.default.createElement("progressbar", { label: title,
+        onComplete: function onComplete() {
+          return _this5.setState({ color: 'green' });
+        },
+        "class": stylesheet.bordered,
+        filled: progress,
+        top: top,
+        width: "90%",
+        height: "10%",
+        style: { bar: { bg: this.state.color } } });
+    }
+  }]);
+
+  return Progress;
 }(_react.Component);
 
 /***/ }),

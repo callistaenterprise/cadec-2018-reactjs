@@ -1,5 +1,5 @@
 query{
-  event(id: "cadec2018"){
+  event(id: "cadec2018-stockholm"){
     talks{
       title
       stars
@@ -15,7 +15,7 @@ query{
 
 
 mutation{
-  updateStars(cadecId: "cadec2018", deviceId: "sw1", talkId:"1", stars:5){
+  updateStars(cadecId: "cadec2018-stockholm", deviceId: "sw1", talkId:"1", stars:5){
     talks{
       title
       totalStars
@@ -25,7 +25,7 @@ mutation{
 }
 
 query{
-  event(id: "cadec2018"){
+  event(id: "cadec2018-stockholm"){
     talks{
       title
       stars

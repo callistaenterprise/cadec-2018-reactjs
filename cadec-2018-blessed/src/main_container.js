@@ -7,7 +7,7 @@ import Main from "./main";
 
 const _mapStateToProps = (state, ownProps) => {
   return {
-    period: selectors.getPeriod(state),
+    period: undefined,
     currentTab: selectors.getCurrentTab(state)
   };
 };

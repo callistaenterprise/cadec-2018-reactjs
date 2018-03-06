@@ -7,6 +7,7 @@ import peterlarsson from "./images/peterlarsson.jpg";
 import stephenwhite from "./images/stephenwhite.jpg";
 import torbjornclaesson from "./images/torbjornclaesson.jpg";
 import fika from "./images/fika.jpg";
+import katarinaaskdal from "./images/katarinaaskdal.jpg";
 
 // ---- images
 const _images = {
@@ -18,7 +19,8 @@ const _images = {
   peterlarsson,
   stephenwhite,
   torbjornclaesson,
-  fika
+  fika,
+  katarinaaskdal
 };
 export const getImage = props => _images[props.speaker];
 

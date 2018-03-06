@@ -18,6 +18,6 @@ export const updateStars = (cadecId, talkId, deviceId, stars) => {
     },
     ReturnValues: "ALL_NEW"
   };
-  console.log("------ params", params);
+  // console.log("------ params", params);
   return d.updateItem(params);
 };
