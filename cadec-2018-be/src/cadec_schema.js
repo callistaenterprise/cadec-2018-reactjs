@@ -31,6 +31,7 @@ type Talk{
   totalDevices: Int
   deviceStars: [Star]
   speakers: [Speaker]
+  speakerNames: String
 }
 type Star{
   deviceId: ID!
@@ -117,35 +118,40 @@ const resolvers = {
       R.propOr({}, "stars"),
       R.values,
       R.reduce(
-        (acc, val) => ({ stars: acc.stars + val, count: acc.count + 1 }),
-        { stars: 0, count: 0 }
+        (acc, val) => ({stars: acc.stars + val, count: acc.count + 1}),
+        {stars: 0, count: 0}
       ),
       starAcc => {
         return starAcc.stars > 0 ? starAcc.stars / starAcc.count : 0;
       }
     ),
-    deviceStars: ({ stars = {} }) => {
+    deviceStars: ({stars = {}}) => {
       const deviceStars = R.pipe(
         R.keys,
         R.reduce(
-          (acc, key) => [...acc, { deviceId: key, stars: stars[key] }],
+          (acc, key) => [...acc, {deviceId: key, stars: stars[key]}],
           []
         )
       )(stars);
       return deviceStars;
     },
-    totalStars: ({ stars = {} }) => {
+    totalStars: ({stars = {}}) => {
       const totalStars = R.pipe(
         R.keys,
         R.reduce((acc, key) => acc + stars[key], 0)
       )(stars);
       return totalStars;
     },
-    totalDevices: ({ stars = {} }) => {
+    totalDevices: ({stars = {}}) => {
       const totalDevices = R.keys(stars).length;
       return totalDevices;
+    },
+    speakerNames: ({speakers}) => {
+      console.log("speakers", speakers);
+      return R.reduce((acc, speaker) => `${acc} ${speaker.name}`, "")(speakers)
     }
   }
+
 };
 
 // Required: Export the GraphQL.js schema object as "schema"
